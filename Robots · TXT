@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mofra-movers-khaki.vercel.app/sitemap.xml
