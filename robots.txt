@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mofra-movers-khaki.vercel.app/sitemap.xml
+Sitemap: https://moframovers.vercel.app/sitemap.xml
