@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" role="img" aria-label="Mofra Movers">
+<defs>
+ <linearGradient id="r" x1="0" x2="1"><stop stop-color="#ff334d"/><stop offset="1" stop-color="#b90018"/></linearGradient>
+ <filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity=".45"/></filter>
+</defs>
+<g filter="url(#s)">
+ <path d="M24 51h178v-18l-25-20h-54l-21 14H48L24 42z" fill="url(#r)"/>
+ <path d="M160 13h17l25 20h-42z" fill="#ff4358"/>
+ <path d="M34 43h137v8H34z" fill="#090909"/>
+ <circle cx="64" cy="54" r="13" fill="#090909" stroke="#e6293f" stroke-width="4"/>
+ <circle cx="171" cy="54" r="13" fill="#090909" stroke="#e6293f" stroke-width="4"/>
+ <path d="M54 29h48l15-11h35l18 15H54z" fill="#151515"/>
+ <path d="M75 30h39l11-10h25l10 10z" fill="#0b0b0b"/>
+</g>
+<text x="218" y="40" fill="#f7f5f0" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="900" letter-spacing="1">MOFRA</text>
+<text x="218" y="66" fill="#e6293f" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="900" letter-spacing="1">MOVERS</text>
+</svg>
