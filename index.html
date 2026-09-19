@@ -91,12 +91,15 @@ h2{font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-.045em;margin
 .gallery-item:first-child{grid-row:span 2}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .gallery-item:hover img{transform:scale(1.04)}
-.review-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.review{background:#111318;border:1px solid var(--line);border-radius:18px;padding:24px}
+.review-strip{display:flex;gap:16px;overflow-x:auto;overflow-y:hidden;padding:4px 2px 14px;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.review-strip::-webkit-scrollbar{height:7px}
+.review-strip::-webkit-scrollbar-thumb{background:#9aa0aa;border-radius:999px}
+.review{background:#111318;border:1px solid var(--line);border-radius:18px;padding:24px;flex:0 0 min(360px,82vw);scroll-snap-align:start}
 .stars{color:#ffc400;letter-spacing:2px;font-size:15px}
 .review p{color:#d4d5d8;margin:14px 0 20px}
 .reviewer{display:flex;justify-content:space-between;gap:12px;font-size:13px}
 .reviewer span{color:#777b84}
+.scroll-hint{margin-top:10px;color:#6f747d;font-size:12px;font-weight:700;letter-spacing:.03em}
 .review-note{margin-top:18px;color:#858992;font-size:12px}
 .quote{background:linear-gradient(135deg,#1a1b20,#0d0e11);border:1px solid var(--line);border-radius:24px;padding:34px}
 .quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
@@ -134,7 +137,7 @@ footer{padding:42px 0 105px;border-top:1px solid var(--line);color:#8d919a}
 .mobile-menu.open{display:block}
 .hero-grid,.quote-grid,.contact-grid,.featured{grid-template-columns:1fr}
 .hero{padding-top:50px} .hero-art{order:-1}
-.grid-3,.review-strip{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:1fr 1fr}
 .process{grid-template-columns:1fr 1fr}
 .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
 .gallery-item:first-child{grid-row:span 1;grid-column:span 2}
@@ -145,7 +148,7 @@ header{position:sticky} .nav{min-height:64px}
 .brand{font-size:9px} .brand span{font-size:5px}
 h1{font-size:46px} .lead{font-size:17px}
 .section{padding:68px 0} .section-head{display:block}
-.grid-3,.review-strip,.process,.form,.footer-grid{grid-template-columns:1fr}
+.grid-3,.process,.form,.footer-grid{grid-template-columns:1fr}
 .gallery{grid-template-columns:1fr;grid-auto-rows:250px}
 .gallery-item:first-child{grid-column:auto}
 .hero-art img{border-radius:18px}
@@ -160,6 +163,19 @@ body{padding-bottom:60px}
 .brand{align-self:flex-start;display:flex;align-items:center;justify-content:flex-start;margin-right:auto;width:auto;height:48px;}
 .brand-logo{display:block;width:145px;height:43px;object-fit:contain;object-position:left center;border:0;}
 @media (max-width:620px){.brand{height:42px}.brand-logo{width:120px;height:38px}}
+
+/* Floating call action */
+.call-float{position:fixed;left:22px;bottom:22px;z-index:9998;display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-weight:800;font-size:14px;box-shadow:0 10px 28px rgba(0,0,0,.22);border:2px solid rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease}
+.call-float:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.28)}
+.call-float .call-icon{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-size:15px;line-height:1}
+.call-float .call-text{display:flex;flex-direction:column;line-height:1.05}
+.call-float .call-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.call-float .call-number{font-size:13px}
+@media(max-width:620px){
+  .call-float{left:12px;bottom:78px;padding:10px 13px;gap:7px}
+  .call-float .call-icon{width:25px;height:25px;font-size:13px}
+  .call-float .call-number{font-size:12px}
+}
 </style>
 </head>
 <body>
@@ -266,6 +282,7 @@ body{padding-bottom:60px}
 <article class="review"><div class="stars">★★★★★</div><p>“Perfect service (packaging, delivery, and setting)… all was handled very well. No complaints.”</p><div class="reviewer"><strong>Josiah Kabugo</strong><span>30 Oct 2016</span></div></article>
 <article class="review"><div class="stars">★★★★★</div><p>“Great Job Mofra, thank you so much for your great services… we recommend your services to anybody else whose moving.”</p><div class="reviewer"><strong>Al-Yusra Kenya</strong><span>9 Feb 2016</span></div></article>
 <article class="review"><div class="stars">★★★★★</div><p>“Thank you for your moving services… from the calls and arrangement to moving you guys were perfect.”</p><div class="reviewer"><strong>Frank Faraji</strong><span>7 Jan 2016</span></div></article></div>
+    <div class="scroll-hint" aria-hidden="true">← Swipe / scroll sideways to see more reviews →</div>
     <p class="review-note">The Google business listing currently surfaced for Mofra Movers shows 3.7/5 from 50 reviews. The quotations above are selected positive reviews publicly indexed on a Mofra Movers listing; they are not presented as a complete or current copy of all Google reviews. For the live review set, use the Google listing button above.</p>
   </div>
 </section>
@@ -339,6 +356,11 @@ body{padding-bottom:60px}
 </footer>
 
 <a class="whatsapp" href="https://wa.me/254721383823?text=Hello%20Mofra%20Movers%2C%20I%20would%20like%20a%20moving%20quote." aria-label="WhatsApp Mofra Movers" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.4ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.9 9.9 0 1 1 8.38 4.62Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.71.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></a>
+
+<a class="call-float" href="tel:+254721383823" aria-label="Call Mofra Movers">
+  <span class="call-icon" aria-hidden="true">☎</span>
+  <span class="call-text"><span class="call-label">Call us</span><span class="call-number">0721 383 823</span></span>
+</a>
 <div class="mobile-bar"><a class="call" href="tel:+254721383823">☎ Call Mofra</a><a class="wa" href="https://wa.me/254721383823?text=Hello%20Mofra%20Movers%2C%20I%20would%20like%20a%20moving%20quote." target="_blank" rel="noopener">WhatsApp</a></div>
 
 <script>
