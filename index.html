@@ -175,6 +175,45 @@ body{padding-bottom:60px}
 }
 </style>
 
+<style id="mofra-3d-hero">
+.hero-3d{position:relative;isolation:isolate;padding:70px 0 78px;overflow:hidden}
+.hero-3d:before{content:"";position:absolute;width:520px;height:520px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(237,28,36,.18),transparent 68%);filter:blur(12px);z-index:-1}
+.hero-3d .hero-grid{perspective:1400px}
+.hero-copy-3d{position:relative;z-index:4}
+.hero-3d-stage{position:relative;min-height:560px;display:grid;place-items:center;transform-style:preserve-3d;transition:transform .22s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.hero-3d-card{position:absolute;transform-style:preserve-3d;border-radius:28px}
+.hero-card-main{width:min(610px,100%);height:440px;transform:rotateY(-9deg) rotateX(4deg) translateZ(35px);transition:transform .35s ease;z-index:3}
+.hero-card-back{width:min(610px,100%);height:440px;background:linear-gradient(135deg,rgba(237,28,36,.72),rgba(17,19,24,.3));border:1px solid rgba(255,255,255,.12);transform:translate3d(28px,24px,-40px) rotateY(-14deg) rotateX(6deg);filter:blur(.2px);z-index:1}
+.hero-image-wrap{position:relative;width:100%;height:100%;overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:28px;background:#111;box-shadow:0 35px 90px rgba(0,0,0,.52),0 0 80px rgba(237,28,36,.12)}
+.hero-image-wrap img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);animation:heroImageDrift 10s ease-in-out infinite alternate}
+.hero-image-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,8,.08),rgba(5,6,8,.18) 45%,rgba(5,6,8,.9))}
+.hero-card-top,.hero-card-bottom{position:absolute;left:22px;right:22px;z-index:2;display:flex;align-items:center}
+.hero-card-top{top:20px;gap:9px;font-size:10px;font-weight:950;letter-spacing:.14em}
+.hero-card-status{margin-left:auto;padding:7px 10px;border-radius:999px;background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);font-size:9px;letter-spacing:.08em}
+.hero-live-dot{width:8px;height:8px;border-radius:50%;background:#43e37b;box-shadow:0 0 14px #43e37b;animation:heroPulse 1.8s infinite}
+.hero-card-bottom{bottom:22px;justify-content:space-between;gap:20px}
+.hero-card-bottom small{display:block;color:#c5c8ce;font-size:11px;margin-bottom:4px}
+.hero-card-bottom strong{display:block;font-size:19px;letter-spacing:-.02em}
+.hero-arrow{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-size:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hero-float{position:absolute;z-index:5;display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid rgba(255,255,255,.16);background:rgba(13,14,18,.72);backdrop-filter:blur(16px);border-radius:15px;box-shadow:0 18px 45px rgba(0,0,0,.3);transform:translateZ(100px);animation:heroFloat 4.5s ease-in-out infinite}
+.hero-float small{display:block;color:#90949d;font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+.hero-float strong{display:block;font-size:12px}
+.hero-float-icon{display:grid;place-items:center;min-width:36px;height:36px;border-radius:10px;background:rgba(237,28,36,.14);color:#fff;font-weight:950;font-size:11px}
+.hero-float-one{left:-28px;top:17%;animation-delay:-1s}
+.hero-float-two{right:-22px;bottom:18%;animation-delay:-2.2s}
+.hero-3d-ring{position:absolute;width:470px;height:470px;border:1px solid rgba(237,28,36,.22);border-radius:50%;transform:rotateX(70deg) rotateZ(12deg) translateZ(-70px);animation:heroRing 12s linear infinite;z-index:0}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(1px);z-index:0}
+.hero-orb-one{width:90px;height:90px;right:4%;top:7%;background:radial-gradient(circle at 35% 30%,#ff6870,rgba(237,28,36,.05) 70%);animation:heroOrb 5s ease-in-out infinite}
+.hero-orb-two{width:45px;height:45px;left:4%;bottom:9%;background:rgba(255,255,255,.1);box-shadow:0 0 45px rgba(255,255,255,.08);animation:heroOrb 6s ease-in-out infinite reverse}
+@keyframes heroImageDrift{from{transform:scale(1.05) translate3d(-1%,0,0)}to{transform:scale(1.1) translate3d(1%, -1%,0)}}
+@keyframes heroFloat{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes heroPulse{0%,100%{opacity:.65;box-shadow:0 0 8px #43e37b}50%{opacity:1;box-shadow:0 0 20px #43e37b}}
+@keyframes heroRing{from{transform:rotateX(70deg) rotateZ(0deg) translateZ(-70px)}to{transform:rotateX(70deg) rotateZ(360deg) translateZ(-70px)}}
+@keyframes heroOrb{0%,100%{translate:0 0}50%{translate:0 -16px}}
+@media(max-width:900px){.hero-3d{padding:50px 0 60px}.hero-3d .hero-grid{gap:30px}.hero-3d-stage{min-height:430px;order:-1}.hero-card-main,.hero-card-back{width:min(560px,94vw);height:360px}.hero-float-one{left:0}.hero-float-two{right:0}.hero-3d-ring{width:360px;height:360px}}
+@media(max-width:620px){.hero-3d{padding:35px 0 48px}.hero-3d-stage{min-height:330px}.hero-card-main,.hero-card-back{height:280px;border-radius:20px}.hero-image-wrap{border-radius:20px}.hero-card-top{left:14px;right:14px;top:14px}.hero-card-status{padding:5px 7px;font-size:8px}.hero-card-bottom{left:15px;right:15px;bottom:15px}.hero-card-bottom strong{font-size:15px}.hero-arrow{width:38px;height:38px;font-size:18px}.hero-float{padding:8px 9px;border-radius:12px;gap:7px}.hero-float-one{left:-2px;top:7%}.hero-float-two{right:-2px;bottom:8%}.hero-float-icon{min-width:29px;height:29px;border-radius:8px;font-size:9px}.hero-float strong{font-size:10px}.hero-float small{font-size:8px}.hero-3d-ring{width:270px;height:270px}.hero-orb-one{width:55px;height:55px}.hero-orb-two{width:28px;height:28px}}
+@media(prefers-reduced-motion:reduce){.hero-3d-stage,.hero-image-wrap img,.hero-float,.hero-3d-ring,.hero-orb-one,.hero-orb-two,.hero-live-dot{animation:none!important;transition:none!important}}
+</style>
 <style id="mofra-compact-responsive">
 /* Compact professional layout */
 .brand img, .logo img { max-height: 58px !important; width: auto !important; }
@@ -235,36 +274,29 @@ footer a, footer p { font-size: 13px !important; }
 @media(max-width:700px){ .mofra-social-links { gap:6px; } .mofra-social-links a { padding:6px 9px; font-size:11px !important; } }
 
 
-/* Image-led horizontal What We Do section */
+/* Image-led horizontal What We Do section — manual scrolling */
 .horizontal-services{
   position:relative;
-  height:calc(100vh + 2200px);
-  padding:0 !important;
+  height:auto !important;
+  padding:70px 0 !important;
 }
 .horizontal-services-sticky{
-  position:sticky;
-  top:0;
-  height:100vh;
-  min-height:620px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  position:relative !important;
+  top:auto !important;
+  height:auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  display:block !important;
   background:var(--bg);
 }
 .horizontal-services-head{
-  flex:0 0 auto;
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
   gap:30px;
-  padding-top:30px;
-  padding-bottom:22px;
-  z-index:2;
+  padding:0 0 28px;
 }
-.horizontal-services-head h2{margin-bottom:10px}
 .horizontal-scroll-label{
-  flex:0 0 auto;
   color:#9ea2aa;
   font-size:12px;
   font-weight:850;
@@ -275,18 +307,27 @@ footer a, footer p { font-size: 13px !important; }
 }
 .horizontal-services-viewport{
   width:100%;
-  overflow:hidden;
-  flex:1 1 auto;
-  display:flex;
-  align-items:center;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  display:block !important;
+  padding:6px 0 18px;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  scroll-behavior:smooth;
+  scrollbar-width:thin;
+  scrollbar-color:#6f747d rgba(255,255,255,.08);
+  touch-action:pan-x pan-y;
 }
+.horizontal-services-viewport::-webkit-scrollbar{height:8px}
+.horizontal-services-viewport::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px}
+.horizontal-services-viewport::-webkit-scrollbar-thumb{background:#777d87;border-radius:999px}
 .horizontal-services-track{
   display:flex;
   gap:18px;
   width:max-content;
   padding:0 max(18px, calc((100vw - var(--max)) / 2));
-  transform:translate3d(0,0,0);
-  will-change:transform;
+  transform:none !important;
+  will-change:auto;
 }
 .service-panel{
   position:relative;
@@ -300,90 +341,33 @@ footer a, footer p { font-size: 13px !important; }
   background:#101216;
   box-shadow:0 18px 60px rgba(0,0,0,.3);
 }
-.service-panel img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:.76;
-  transition:transform .55s ease,opacity .35s ease;
-}
-.service-panel:hover img{transform:scale(1.04);opacity:.9}
-.service-panel:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.08) 20%,rgba(0,0,0,.88) 100%);
-  pointer-events:none;
-}
-.service-panel-content{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:1;
-  padding:28px;
-}
-.service-number{
-  display:inline-flex;
-  margin-bottom:12px;
-  color:#fff;
-  font-size:11px;
-  font-weight:950;
-  letter-spacing:.16em;
-  opacity:.75;
-}
-.service-panel h3{
-  margin:0 0 8px;
-  font-size:27px !important;
-  letter-spacing:-.025em;
-}
-.service-panel p{
-  max-width:440px;
-  margin:0;
-  color:#d7d9de;
-}
-.service-panel a{
-  display:inline-block;
-  margin-top:17px;
-  color:#fff;
-  font-weight:900;
-}
-.horizontal-progress{
-  flex:0 0 auto;
-  height:3px;
-  background:rgba(255,255,255,.08);
-  border-radius:999px;
-  overflow:hidden;
-  margin-bottom:24px;
-}
-.horizontal-progress span{
-  display:block;
-  width:0%;
-  height:100%;
-  background:var(--red);
-  transform-origin:left center;
-}
-
+.service-panel img{width:100%;height:100%;object-fit:cover;opacity:.82;transition:transform .55s ease,opacity .35s ease}
+.service-panel:hover img{transform:scale(1.04);opacity:.95}
+.service-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 20%,rgba(0,0,0,.88) 100%);pointer-events:none}
+.service-panel-content{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:28px}
+.service-number{display:inline-flex;margin-bottom:12px;color:#fff;font-size:11px;font-weight:950;letter-spacing:.16em;opacity:.75}
+.service-panel h3{margin:0 0 8px;font-size:27px !important;letter-spacing:-.025em}
+.service-panel p{max-width:440px;margin:0;color:#d7d9de}
+.service-panel a{display:inline-block;margin-top:17px;color:#fff;font-weight:900}
+.horizontal-progress{height:3px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:12px 0 0}
+.horizontal-progress span{display:block;width:0%;height:100%;background:var(--red);transform-origin:left center}
 @media(max-width:900px){
-  .horizontal-services{height:calc(100vh + 2700px)}
-  .horizontal-services-sticky{min-height:560px}
-  .horizontal-services-head{padding-top:22px;align-items:flex-start}
-  .horizontal-scroll-label{display:none}
+  .horizontal-services{padding:54px 0 !important}
+  .horizontal-services-head{padding-bottom:20px}
+  .horizontal-scroll-label{display:block;font-size:10px}
   .service-panel{width:min(430px,82vw);height:58vh;min-height:360px}
   .service-panel-content{padding:22px}
 }
 @media(max-width:620px){
-  .horizontal-services{height:calc(100vh + 3000px)}
-  .horizontal-services-sticky{min-height:540px}
-  .horizontal-services-head{padding-top:16px;padding-bottom:16px}
-  .horizontal-services-head .sub{font-size:13px !important}
+  .horizontal-services{padding:44px 0 !important}
+  .horizontal-services-head{display:block;padding-bottom:16px}
+  .horizontal-scroll-label{margin-top:10px;padding:0}
+  .horizontal-services-viewport{padding:4px 0 14px}
   .horizontal-services-track{gap:12px;padding:0 12px}
   .service-panel{width:84vw;height:54vh;min-height:330px;border-radius:18px}
   .service-panel h3{font-size:22px !important}
   .service-panel-content{padding:20px}
-  .horizontal-progress{margin:0 12px 16px}
-}
-</style><style id="final-responsive-overrides">
+}</style><style id="final-responsive-overrides">
 /* Scan Scope-inspired horizontal Methods/Services strip.
    This is a TRUE horizontal scroller: touch/trackpad moves the strip sideways;
    normal page scrolling remains vertical before and after it. */
@@ -662,9 +646,9 @@ footer a, footer p { font-size: 13px !important; }
 </header>
 
 <main id="top">
-<section class="hero">
+<section class="hero hero-3d">
   <div class="container hero-grid">
-    <div>
+    <div class="hero-copy-3d">
       <div class="kicker"><i></i> Nairobi · Kenya · East Africa</div>
       <h1>Move with <span>confidence.</span><br>Arrive with peace of mind.</h1>
       <p class="lead">Mofra Movers helps households and businesses relocate with house moving, apartment moves, office relocation, packing, storage and transportation services.</p>
@@ -675,6 +659,38 @@ footer a, footer p { font-size: 13px !important; }
       <div class="trust-row">
         <span><strong>House & office moves</strong></span><span>•</span><span><strong>Nairobi & Kenya</strong></span><span>•</span><span><strong>Selected East Africa routes</strong></span>
       </div>
+    </div>
+    <div class="hero-3d-stage" id="hero3dStage" aria-label="Mofra Movers moving service">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <div class="hero-3d-card hero-card-back"></div>
+      <div class="hero-3d-card hero-card-main">
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1600&q=85" alt="Professional moving service" loading="eager">
+          <div class="hero-image-shade"></div>
+          <div class="hero-card-top">
+            <span class="hero-live-dot"></span>
+            <span>MOFRA MOVERS</span>
+            <span class="hero-card-status">READY TO MOVE</span>
+          </div>
+          <div class="hero-card-bottom">
+            <div>
+              <small>Moving across Kenya</small>
+              <strong>Move smarter. Move easier.</strong>
+            </div>
+            <span class="hero-arrow">↗</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float hero-float-one">
+        <span class="hero-float-icon">✓</span>
+        <div><small>Professional</small><strong>Moving team</strong></div>
+      </div>
+      <div class="hero-float hero-float-two">
+        <span class="hero-float-icon">24/7</span>
+        <div><small>Quick contact</small><strong>Call or WhatsApp</strong></div>
+      </div>
+      <div class="hero-3d-ring"></div>
     </div>
   </div>
 </section>
@@ -882,72 +898,36 @@ document.getElementById('quoteForm').addEventListener('submit',function(e){
   window.open('https://wa.me/254721383823?text='+encodeURIComponent(message),'_blank');
 });
 
-/* Pinned "What We Do" rail — scrolling DOWN the page slides the panels
-   sideways while the section stays pinned; once the panels run out the
-   page continues scrolling down normally. Falls back to a plain native
-   horizontal swipe on small screens (handled by the mobile CSS override,
-   which also neutralizes the transform below). */
+/* Manual horizontal "What We Do" rail — users control the sideways scroll. */
 (() => {
-  const section  = document.querySelector('.horizontal-services');
-  const sticky   = document.querySelector('.horizontal-services-sticky');
-  const viewport = document.querySelector('.horizontal-services-viewport');
-  const track    = document.querySelector('.horizontal-services-track');
-  const progress = document.getElementById('servicesProgress');
-  if (!section || !viewport || !track) return;
-
-  const mq = window.matchMedia('(max-width:700px)');
-  let maxTranslate = 0;
-  let maxScroll = 1;
-  let ticking = false;
-
-  const measure = () => {
-    maxTranslate = Math.max(0, track.scrollWidth - viewport.clientWidth);
-    maxScroll = Math.max(1, section.offsetHeight - window.innerHeight);
+  const viewport=document.querySelector('.horizontal-services-viewport');
+  const progress=document.getElementById('servicesProgress');
+  if(!viewport || !progress) return;
+  const update=()=>{
+    const max=viewport.scrollWidth-viewport.clientWidth;
+    progress.style.width=(max>0 ? (viewport.scrollLeft/max)*100 : 0)+'%';
   };
+  viewport.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update,{passive:true});
+  update();
 
-  const render = () => {
-    ticking = false;
-    // All screen sizes use vertical page scroll to drive the horizontal rail.
-
-    const rect = section.getBoundingClientRect();
-    // How far we've scrolled into the pinned section (0 at top, maxScroll at bottom)
-    const scrolled = Math.min(maxScroll, Math.max(0, -rect.top));
-    const pct = scrolled / maxScroll;
-
-    track.style.transform = `translate3d(${-pct * maxTranslate}px,0,0)`;
-    if (progress) progress.style.width = (pct * 100) + '%';
-  };
-
-  const onScroll = () => {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(render);
-    }
-  };
-
-  const onResize = () => {
-    measure();
-    onScroll();
-  };
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', onResize, {passive:true});
-  window.addEventListener('load', onResize, {once:true});
-  measure();
-  render();
-})();
 
 </script>
+
 <script>
 (() => {
-  const hero=document.querySelector('.hero');
-  if(!hero) return;
-  let n=1;
-  setInterval(() => {
-    n=n===4?1:n+1;
-    hero.classList.remove('hero-slide-2','hero-slide-3','hero-slide-4');
-    if(n>1) hero.classList.add('hero-slide-'+n);
-  },5000);
+  const stage=document.getElementById('hero3dStage');
+  if(!stage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let raf=0;
+  const move=(e)=>{
+    const r=stage.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>{ stage.style.transform=`rotateY(${x*5}deg) rotateX(${-y*4}deg)`; });
+  };
+  stage.addEventListener('pointermove',move);
+  stage.addEventListener('pointerleave',()=>{stage.style.transform='rotateY(0deg) rotateX(0deg)';});
 })();
 </script>
 </body>
