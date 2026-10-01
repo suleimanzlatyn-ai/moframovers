@@ -392,44 +392,98 @@ footer a, footer p { font-size: 13px !important; }
   .container{width:100%!important;max-width:none!important;margin:0!important;padding-left:18px!important;padding-right:18px!important}
   section.section{padding-left:0!important;padding-right:0!important}
   section.section>.container{padding-left:18px!important;padding-right:18px!important}
-
-  .card,.feature,.contact-card,.quote,.review{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-  .card,.feature,.contact-card,.quote,.review{padding:0!important}
-  .feature+.feature,.contact-card+.contact-card,.card+.card{border-top:1px solid var(--line)!important;padding-top:30px!important}
-
   h1{font-size:clamp(43px,12.5vw,60px)!important}
   h2{font-size:clamp(31px,9vw,46px)!important}
   h3{font-size:21px!important}
   .lead{font-size:18px!important}
   .section{padding-top:72px!important;padding-bottom:72px!important}
 
-  /* The section itself is ordinary vertical content. */
-  .horizontal-services{height:auto!important;padding:72px 0!important;overflow:visible!important}
-  .horizontal-services-sticky{position:static!important;height:auto!important;min-height:0!important;display:block!important;overflow:visible!important}
-  .horizontal-services-head{display:block!important;padding:0 18px 28px!important}
+  /* Mobile now uses the same scroll-down -> sideways experience as desktop. */
+  .horizontal-services{
+    height:calc(100vh + 2500px)!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  .horizontal-services-sticky{
+    position:sticky!important;
+    top:0!important;
+    height:100svh!important;
+    min-height:560px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+  }
+  .horizontal-services-head{
+    display:block!important;
+    flex:0 0 auto!important;
+    padding:20px 18px 18px!important;
+  }
   .horizontal-services-head h2{margin:8px 0 10px!important}
   .horizontal-services-head .sub{font-size:15px!important;line-height:1.55!important}
+  .horizontal-scroll-label{
+    display:block!important;
+    margin-top:14px!important;
+    font-size:10px!important;
+    letter-spacing:.15em!important;
+    color:#777c85!important;
+  }
+  .horizontal-scroll-label::before{content:"↕  "!important;color:var(--red)!important}
 
-  /* TRUE side-scroll track, like a horizontal methods rail. */
-  .horizontal-services-viewport{width:100%!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important;overscroll-behavior-x:contain!important;touch-action:pan-x!important}
-  .horizontal-services-viewport::-webkit-scrollbar{display:none!important}
-  .horizontal-services-track{width:max-content!important;display:flex!important;gap:16px!important;padding:0 18px 24px!important;transform:none!important;will-change:auto!important}
-  .service-panel{width:82vw!important;max-width:520px!important;flex:0 0 82vw!important;height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;scroll-snap-align:start!important;scroll-snap-stop:always!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
-  .service-panel img{position:relative!important;inset:auto!important;width:100%!important;height:58vw!important;min-height:250px!important;max-height:360px!important;object-fit:cover!important;opacity:1!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-  .service-panel:after{display:none!important}
-  .service-panel-content{position:relative!important;inset:auto!important;padding:18px 2px 0!important}
-  .service-number{display:block!important;margin:0 0 8px!important;color:var(--red)!important;font-size:10px!important;letter-spacing:.18em!important;opacity:1!important}
-  .service-panel h3{margin:0 0 8px!important;font-size:25px!important;line-height:1.08!important;letter-spacing:-.025em!important}
-  .service-panel p{margin:0!important;color:#aeb2bb!important;font-size:15px!important;line-height:1.6!important;max-width:460px!important}
-
-  .horizontal-progress{height:2px!important;margin:8px 18px 0!important;border-radius:0!important;background:rgba(255,255,255,.10)!important}
+  .horizontal-services-viewport{
+    width:100%!important;
+    overflow:hidden!important;
+    flex:1 1 auto!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .horizontal-services-track{
+    width:max-content!important;
+    display:flex!important;
+    gap:14px!important;
+    padding:0 18px 20px!important;
+    transform:translate3d(0,0,0);
+    will-change:transform;
+  }
+  .service-panel{
+    width:78vw!important;
+    max-width:430px!important;
+    flex:0 0 78vw!important;
+    height:auto!important;
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    background:#101216!important;
+    border:1px solid rgba(255,255,255,.13)!important;
+    border-radius:18px!important;
+    box-shadow:0 18px 50px rgba(0,0,0,.3)!important;
+    overflow:hidden!important;
+  }
+  .service-panel img{
+    width:100%!important;
+    height:50vw!important;
+    min-height:220px!important;
+    max-height:300px!important;
+    object-fit:cover!important;
+    opacity:1!important;
+    border-radius:0!important;
+  }
+  .service-panel:after{display:block!important}
+  .service-panel-content{
+    position:relative!important;
+    padding:18px!important;
+    background:#101216!important;
+  }
+  .service-number{margin:0 0 7px!important;color:var(--red)!important;font-size:10px!important;opacity:1!important}
+  .service-panel h3{margin:0 0 7px!important;font-size:23px!important;line-height:1.08!important}
+  .service-panel p{margin:0!important;color:#aeb2bb!important;font-size:14px!important;line-height:1.5!important}
+  .horizontal-progress{
+    height:3px!important;
+    margin:10px 18px 16px!important;
+    background:rgba(255,255,255,.10)!important;
+  }
   .horizontal-progress span{background:var(--red)!important}
-
-  /* A compact cue like the reference horizontal rails. */
-  .horizontal-scroll-label{display:block!important;margin-top:17px!important;font-size:10px!important;letter-spacing:.15em!important;color:#777c85!important;text-transform:uppercase}
-  .horizontal-scroll-label::before{content:"↔  "!important;color:var(--red)!important}
 }
-
 @media (min-width:701px){
   .service-panel{height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;background:#101216!important}
   .service-panel img{position:relative!important;width:100%!important;height:310px!important;object-fit:cover!important;opacity:1!important}
@@ -564,6 +618,31 @@ footer a, footer p { font-size: 13px !important; }
 }
 </style>
 
+<style id="mofra-hero-slideshow">
+.hero:before{
+  transition:opacity .7s ease,background-image .7s ease;
+}
+.hero.hero-slide-2:before{
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.82) 42%,rgba(5,5,5,.42) 76%,rgba(5,5,5,.68) 100%),
+    url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+}
+.hero.hero-slide-3:before{
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.82) 42%,rgba(5,5,5,.42) 76%,rgba(5,5,5,.68) 100%),
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+}
+.hero.hero-slide-4:before{
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.82) 42%,rgba(5,5,5,.42) 76%,rgba(5,5,5,.68) 100%),
+    url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+}
+@media(max-width:700px){
+ .hero.hero-slide-2:before,.hero.hero-slide-3:before,.hero.hero-slide-4:before{
+  background-position:center;
+ }
+}
+</style>
 </head>
 <body>
 <header>
@@ -828,7 +907,7 @@ document.getElementById('quoteForm').addEventListener('submit',function(e){
 
   const render = () => {
     ticking = false;
-    if (mq.matches) return; // mobile: native swipe only, no scroll-jack
+    // All screen sizes use vertical page scroll to drive the horizontal rail.
 
     const rect = section.getBoundingClientRect();
     // How far we've scrolled into the pinned section (0 at top, maxScroll at bottom)
@@ -858,6 +937,18 @@ document.getElementById('quoteForm').addEventListener('submit',function(e){
   render();
 })();
 
+</script>
+<script>
+(() => {
+  const hero=document.querySelector('.hero');
+  if(!hero) return;
+  let n=1;
+  setInterval(() => {
+    n=n===4?1:n+1;
+    hero.classList.remove('hero-slide-2','hero-slide-3','hero-slide-4');
+    if(n>1) hero.classList.add('hero-slide-'+n);
+  },5000);
+})();
 </script>
 </body>
 </html>
