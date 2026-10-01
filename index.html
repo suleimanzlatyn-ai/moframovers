@@ -22,7 +22,7 @@
  "name":"Mofra Movers",
  "url":"https://moframoverskenya.co.ke/",
  "telephone":"+254721383823",
- "email":"sales@moframovers.com",
+ "email":"Moframoverscs@gmail.com",
  "foundingDate":"2007",
  "address":{"@type":"PostalAddress","streetAddress":"George Padmore Lane, off Ngong Road, opposite Uchumi Hyper, Dove Centre","addressLocality":"Nairobi","addressCountry":"KE"},
  "areaServed":["Nairobi","Kenya","Uganda","Tanzania","Rwanda"],
@@ -490,6 +490,80 @@ footer a, footer p { font-size: 13px !important; }
 }
 </style>
 
+
+<style id="mofra-mobile-polish">
+/* Mobile horizontal content: reliable touch scrolling */
+.review-strip{
+  width:100%;
+  max-width:100%;
+  overflow-x:auto !important;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x;
+  scroll-snap-type:x mandatory;
+  padding-left:2px;
+  padding-right:2px;
+}
+.review-strip > *{scroll-snap-align:start;min-width:0}
+.review{
+  flex:0 0 min(360px,82vw);
+}
+.scroll-hint{
+  display:block;
+  text-align:center;
+  padding:8px 0 0;
+}
+
+/* More visual energy without changing the brand */
+.card,.feature,.contact-card,.review,.quote{
+  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.card:hover,.feature:hover,.contact-card:hover,.review:hover{
+  transform:translateY(-4px);
+  border-color:rgba(237,28,36,.28);
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
+}
+.hero-art img{
+  transition:transform .45s ease, filter .45s ease;
+}
+.hero-art:hover img{
+  transform:scale(1.015);
+  filter:saturate(1.08);
+}
+.btn-primary{
+  position:relative;
+  overflow:hidden;
+}
+.btn-primary:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:skewX(-20deg);
+  transition:left .6s ease;
+}
+.btn-primary:hover:after{left:140%}
+
+@media(max-width:620px){
+  .review-strip{
+    width:calc(100vw - 24px);
+    margin-left:0;
+    padding-bottom:16px;
+    scrollbar-width:thin;
+  }
+  .review{
+    flex-basis:84vw;
+  }
+  .section-head{margin-bottom:24px}
+  .card,.feature,.contact-card{padding:22px}
+  .hero{padding-bottom:40px}
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -656,7 +730,7 @@ footer a, footer p { font-size: 13px !important; }
     <div class="contact-grid">
       <div class="contact-card">
         <div class="contact-item"><small>Call / WhatsApp</small><a href="tel:+254721383823">0721 383 823</a></div>
-        <div class="contact-item"><small>Email</small><a href="mailto:sales@moframovers.com">sales@moframovers.com</a></div>
+        <div class="contact-item"><small>Email</small><a href="mailto:Moframoverscs@gmail.com">Moframoverscs@gmail.com</a></div>
         <div class="contact-item"><small>Nairobi location</small><span>George Padmore Lane, off Ngong Road, opposite Uchumi Hyper, Dove Centre, Nairobi.</span></div>
         <div class="contact-item"><small>Service area</small><span>Nairobi, Kenya and selected East African routes.</span></div>
       </div>
@@ -689,7 +763,7 @@ footer a, footer p { font-size: 13px !important; }
   <div class="container footer-grid">
     <div><div class="footer-title">MOFRA MOVERS</div><div>Nairobi moving, relocation, packing, storage and transportation.</div></div>
     <div><div class="footer-title">Quick links</div><div><a href="#services">What we do</a> · <a href="#reviews">Reviews</a> · <a href="#quote">Request a quote</a></div></div>
-    <div><div class="footer-title">Contact</div><div><a href="tel:+254721383823">0721 383 823</a> · <a href="mailto:sales@moframovers.com">sales@moframovers.com</a></div></div>
+    <div><div class="footer-title">Contact</div><div><a href="tel:+254721383823">0721 383 823</a> · <a href="mailto:Moframoverscs@gmail.com">Moframoverscs@gmail.com</a></div></div>
   </div>
 
 <div class="mofra-socials" aria-label="Social media">
