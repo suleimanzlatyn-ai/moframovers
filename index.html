@@ -291,6 +291,26 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 @media(max-width:950px){.hero-pro{min-height:auto!important;padding:62px 0 30px!important}.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:24px!important}.hero-pro .hero-copy{padding-bottom:10px!important}.hero-pro .hero-visual{min-height:520px!important}.hero-stage-pro{height:500px}.hero-main-panel{left:50px;right:50px}.hero-quote-card{left:10px!important}.hero-accent-card{right:0!important}}
 @media(max-width:620px){.hero-pro{padding:34px 0 18px!important}.hero-pro h1{font-size:48px!important}.hero-pro .lead{font-size:15px!important}.hero-pro .hero-visual{min-height:410px!important}.hero-stage-pro{height:390px}.hero-stage-grid{inset:15px 4px 18px}.hero-main-panel{left:25px;right:25px;top:55px;bottom:55px;border-radius:19px}.panel-top{height:45px;padding:0 13px;font-size:7px}.panel-content{padding:30px 20px 20px}.panel-content strong{font-size:34px}.panel-content p{font-size:10px}.panel-route{left:20px;right:20px;bottom:17px}.route-line{left:15px;right:15px;top:35px;height:320px}.route-label{font-size:7px}.hero-float-card{left:0!important;bottom:10px!important;padding:10px 12px!important}.hero-accent-card{right:0!important;top:25px!important;width:72px!important;height:84px!important;padding:11px!important}.hero-quote-card{left:8px!important;bottom:-4px!important;width:205px!important;padding:13px!important}.hero-quote-card b{font-size:12px}.hero-quote-card small{font-size:8px}}
 
+
+/* Clean, simple hero */
+.hero-pro{min-height:650px!important;padding:80px 0 70px!important;background:#08090b!important;overflow:hidden!important}
+.hero-pro .hero-grid{grid-template-columns:1.08fr .92fr!important;align-items:center!important;gap:70px!important;min-height:500px!important}
+.hero-pro .hero-copy{max-width:620px!important;padding:0!important}
+.hero-pro .eyebrow{border:0!important;background:none!important;padding:0!important;color:#9297a0!important;font-size:10px!important;letter-spacing:.18em!important}
+.hero-pro h1{font-size:clamp(58px,7vw,94px)!important;line-height:.9!important;letter-spacing:-.065em!important;margin:22px 0 24px!important}
+.hero-pro h1 em{font-style:normal;background:none!important;color:#ed1c24!important;-webkit-text-fill-color:#ed1c24!important}
+.hero-pro .lead{max-width:540px!important;color:#aeb2bb!important;font-size:17px!important;line-height:1.7!important}
+.hero-pro .hero-actions{margin-top:30px!important}
+.hero-pro .hero-note{margin-top:24px!important;color:#6f747d!important;font-size:11px!important;letter-spacing:.04em!important}
+.hero-pro .hero-visual{min-height:430px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.hero-clean-card{position:relative;width:min(440px,100%);height:430px;border:1px solid rgba(255,255,255,.11);border-radius:24px;background:#101216;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.hero-clean-card:before{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:rgba(237,28,36,.09);filter:blur(4px)}
+.clean-card-top,.clean-card-bottom{position:relative;display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.14em;color:#747982}
+.clean-card-top span{color:#fff;font-weight:800}.clean-card-top b{color:#ed1c24;font-size:9px}
+.clean-card-center{position:relative;border-left:2px solid #ed1c24;padding-left:22px}.clean-card-center span{display:block;color:#ed1c24;font-size:9px;font-weight:900;letter-spacing:.2em;margin-bottom:10px}.clean-card-center strong{display:block;font-size:48px;line-height:.9;letter-spacing:-.06em}
+.clean-card-line{position:relative;height:1px;background:rgba(255,255,255,.1)}
+@media(max-width:950px){.hero-pro{padding:60px 0 50px!important}.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:42px!important}.hero-pro .hero-visual{min-height:390px!important}.hero-clean-card{height:390px}}
+@media(max-width:620px){.hero-pro{padding:42px 0 35px!important}.hero-pro h1{font-size:50px!important}.hero-pro .lead{font-size:15px!important}.hero-pro .hero-actions{flex-wrap:wrap}.hero-pro .hero-visual{min-height:300px!important}.hero-clean-card{height:300px;padding:20px;border-radius:18px}.clean-card-center strong{font-size:37px}.clean-card-bottom{font-size:7px}}
 </style>
 </head>
 <body id="top"><div class="scroll-progress" id="scrollProgress"></div>
@@ -315,54 +335,27 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
   </div>
 </header><main>
 <section class="hero hero-pro" id="home">
-  <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <div class="eyebrow"><i></i> MOFRA MOVERS · NAIROBI</div>
-      <div class="hero-route">Our location <b>NAIROBI, KENYA</b></div>
-      <h1>Moving is stressful.<br><em>We make it simple.</em></h1>
-      <p class="lead">Professional house moving, office relocation, packing, storage and transportation — planned carefully from pickup to delivery.</p>
+      <h1>Moving made<br><em>simple.</em></h1>
+      <p class="lead">Professional moving, relocation, packing, storage and transportation — carefully planned from pickup to delivery.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-glow" href="#quote">Get a Free Quote <span>→</span></a>
+        <a class="btn btn-primary" href="#quote">Get a Free Quote <span>→</span></a>
         <a class="btn btn-dark" href="tel:+254721383823">Call 0721 383 823</a>
       </div>
-      <div class="hero-trust-row"><span class="hero-trust-pill"><i class="hero-trust-dot"></i><b>Professional</b> moving support</span><span class="hero-trust-pill">📍 <b>Nairobi</b> · Kenya</span><span class="hero-trust-pill">✦ <b>2007</b> established</span></div>
-      <div class="hero-mini-proof">
-        <span><b>Since 2007</b>Trusted moving experience</span>
-        <span><b>Kenya + EA</b>Selected regional routes</span>
-        <span><b>WhatsApp</b>Easy quote requests</span>
-      </div>
-      <div class="hero-metrics"><div class="hero-metric"><strong>Homes</strong><span>Residential relocation</span></div><div class="hero-metric"><strong>Offices</strong><span>Business moves</span></div><div class="hero-metric"><strong>East Africa</strong><span>Selected regional routes</span></div></div>
+      <p class="hero-note">House moves · Office relocation · Nairobi & Kenya</p>
     </div>
-    <div class="hero-visual reveal" aria-label="Mofra Movers moving services">
-      <div class="visual-glow"></div>
-      <div class="hero-orb orb-one"></div>
-      <div class="hero-orb orb-two"></div>
-      <div class="hero-stage-pro">
-        <div class="hero-stage-grid"></div>
-        <div class="route-line"><span></span><i></i><b></b></div>
-        <div class="route-label route-a">PICKUP</div>
-        <div class="route-label route-b">DELIVERY</div>
-        <div class="hero-main-panel">
-          <div class="panel-top"><span class="live"></span><b>MOFRA MOVERS</b><span>RELOCATION</span></div>
-          <div class="panel-content">
-            <small>YOUR MOVE, PROPERLY PLANNED.</small>
-            <strong>From door<br>to destination.</strong>
-            <p>House moves · Office relocation · Packing · Storage · Transport</p>
-          </div>
-          <div class="panel-route"><span>Nairobi</span><i></i><span>Kenya</span></div>
-        </div>
-        <div class="hero-float-card"><span class="float-icon">✓</span><div><b>Moving made simple</b><small>Plan · Pack · Move · Settle</small></div></div>
-        <div class="hero-accent-card"><span>01</span><b>HOUSE<br>TO<br>OFFICE</b></div>
-        <div class="hero-quote-card"><span>THE MOFRA STANDARD</span><b>Plan it. Protect it. Move it.</b><small>Professional relocation support from pickup to delivery.</small></div>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="hero-clean-card">
+        <div class="clean-card-top"><span>MOFRA MOVERS</span><b>EST. 2007</b></div>
+        <div class="clean-card-center"><span>MOVE</span><strong>WITH<br>CONFIDENCE.</strong></div>
+        <div class="clean-card-line"></div>
+        <div class="clean-card-bottom"><span>PACKING</span><span>STORAGE</span><span>TRANSPORT</span></div>
       </div>
     </div>
   </div>
-  <div class="hero-bottom-line"><div class="container"><span>MOVE WITH CONFIDENCE</span><i></i><span>PACKING</span><i></i><span>STORAGE</span><i></i><span>TRANSPORT</span><i></i><span>RELOCATION</span></div></div>
 </section>
-<section class="trust-strip" aria-label="Mofra Movers at a glance"><div class="container trust-grid"><div class="trust-item"><strong>Since 2007</strong><span>Nairobi-based moving company</span></div><div class="trust-item"><strong>3.7/5</strong><span>51 reviews on Google listing</span></div><div class="trust-item"><strong>Kenya + East Africa</strong><span>Selected regional routes</span></div><div class="trust-item"><strong>House + Office</strong><span>Relocation, packing, storage & transport</span></div></div></section>
-
-
 
 <section class="section services" id="services">
   <div class="container">
