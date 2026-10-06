@@ -311,6 +311,35 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 .clean-card-line{position:relative;height:1px;background:rgba(255,255,255,.1)}
 @media(max-width:950px){.hero-pro{padding:60px 0 50px!important}.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:42px!important}.hero-pro .hero-visual{min-height:390px!important}.hero-clean-card{height:390px}}
 @media(max-width:620px){.hero-pro{padding:42px 0 35px!important}.hero-pro h1{font-size:50px!important}.hero-pro .lead{font-size:15px!important}.hero-pro .hero-actions{flex-wrap:wrap}.hero-pro .hero-visual{min-height:300px!important}.hero-clean-card{height:300px;padding:20px;border-radius:18px}.clean-card-center strong{font-size:37px}.clean-card-bottom{font-size:7px}}
+
+/* Cinematic hero — bold, premium and intentionally clean */
+.hero-cinematic{position:relative;min-height:720px;padding:0;overflow:hidden;isolation:isolate;background:#07080a}
+.hero-cinematic-image{position:absolute;z-index:-2;inset:0 0 0 29%;overflow:hidden}
+.hero-cinematic-image img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.92) contrast(1.08) brightness(.86);transform:scale(1.025);animation:cinematicZoom 16s ease-out both}
+.hero-cinematic-image-shade{position:absolute;inset:0;background:linear-gradient(90deg,#07080a 0%,rgba(7,8,10,.94) 13%,rgba(7,8,10,.48) 39%,rgba(7,8,10,.08) 70%,rgba(7,8,10,.22) 100%),linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.48))}
+.hero-cinematic-grid{position:relative;min-height:720px;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.hero-cinematic-copy{max-width:650px;padding:50px 0 80px;position:relative;z-index:3}
+.hero-cinematic-kicker{display:flex;align-items:center;gap:10px;color:#9da1aa;font-size:10px;font-weight:950;letter-spacing:.22em;text-transform:uppercase}
+.hero-cinematic-kicker span{width:34px;height:2px;background:var(--red);display:block}
+.hero-cinematic h1{font-size:clamp(60px,7.4vw,105px);line-height:.84;letter-spacing:-.075em;margin:25px 0 29px;max-width:700px;text-wrap:balance}
+.hero-cinematic h1 em{font-style:normal;color:#fff;position:relative}
+.hero-cinematic h1 em:after{content:"";position:absolute;left:4px;right:8%;bottom:-7px;height:5px;background:var(--red);transform:skewX(-28deg);transform-origin:left}
+.hero-cinematic-copy>p{max-width:480px;margin:0;color:#b4b8c0;font-size:16px;line-height:1.75}
+.hero-cinematic-actions{display:flex;align-items:center;gap:22px;margin-top:31px;flex-wrap:wrap}
+.hero-cinematic-actions .btn{min-height:51px;padding:13px 21px;border-radius:10px}
+.hero-cinematic-actions .btn b{font-size:18px;font-weight:700}
+.hero-cinematic-call{display:grid;gap:2px;color:#fff;padding-left:17px;border-left:1px solid rgba(255,255,255,.2)}
+.hero-cinematic-call span{font-size:9px;color:#858a93;letter-spacing:.14em;text-transform:uppercase}.hero-cinematic-call strong{font-size:13px;letter-spacing:.02em}
+.hero-cinematic-side{height:100%;position:relative;display:flex;align-items:center;justify-content:flex-end;padding:0 28px 0 0}
+.hero-cinematic-tag{font-size:9px;line-height:1.45;letter-spacing:.18em;color:rgba(255,255,255,.48);text-align:right;transform:translateY(-125px)}
+.hero-cinematic-tag b{color:#fff;font-weight:900}
+.hero-cinematic-bottom{position:absolute;right:28px;bottom:38px;display:flex;align-items:center;gap:12px;color:#bfc2c8;font-size:9px;letter-spacing:.16em}
+.hero-cinematic-bottom span:first-child{color:#ff5a62;font-weight:950}.hero-cinematic-bottom i{width:48px;height:1px;background:rgba(255,255,255,.3)}
+.hero-cinematic-line{position:absolute;left:0;bottom:0;width:42%;height:3px;background:var(--red);z-index:4}
+@keyframes cinematicZoom{from{transform:scale(1.09)}to{transform:scale(1.025)}}
+@media(max-width:950px){.hero-cinematic{min-height:650px}.hero-cinematic-grid{min-height:650px;grid-template-columns:1fr}.hero-cinematic-image{inset:0}.hero-cinematic-image-shade{background:linear-gradient(90deg,rgba(7,8,10,.95) 0%,rgba(7,8,10,.72) 42%,rgba(7,8,10,.3) 100%),linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.7))}.hero-cinematic-copy{padding:70px 0 100px}.hero-cinematic-side{position:absolute;inset:0;pointer-events:none}.hero-cinematic-tag{display:none}.hero-cinematic-bottom{right:0;bottom:35px}}
+@media(max-width:620px){.hero-cinematic{min-height:650px}.hero-cinematic-grid{min-height:650px;width:calc(100% - 24px)}.hero-cinematic-image{inset:0}.hero-cinematic-image img{object-position:58% center}.hero-cinematic-image-shade{background:linear-gradient(90deg,rgba(7,8,10,.97) 0%,rgba(7,8,10,.82) 48%,rgba(7,8,10,.38) 100%),linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.78))}.hero-cinematic-copy{padding:52px 0 105px}.hero-cinematic h1{font-size:54px;margin:21px 0 24px}.hero-cinematic h1 em:after{height:4px;bottom:-5px}.hero-cinematic-copy>p{font-size:14px;line-height:1.65;max-width:330px}.hero-cinematic-actions{gap:15px;margin-top:26px}.hero-cinematic-actions .btn{min-height:48px}.hero-cinematic-call{padding-left:13px}.hero-cinematic-bottom{right:0;bottom:28px;font-size:7px;gap:8px}.hero-cinematic-bottom i{width:25px}.hero-cinematic-line{width:55%}}
+@media(prefers-reduced-motion:reduce){.hero-cinematic-image img{animation:none}}
 </style>
 <style>
 /* Mofra premium hero — intentionally restrained, editorial and conversion-focused */
@@ -369,30 +398,27 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
     </div>
   </div>
 </header><main>
-<section class="hero hero-premium" id="home">
-  <div class="hero-premium-bg" aria-hidden="true"></div>
-  <div class="container hero-premium-grid">
-    <div class="hero-premium-copy reveal">
-      <div class="hero-kicker"><span></span> MOVING & RELOCATION · NAIROBI</div>
-      <h1>A better way<br>to <em>move.</em></h1>
-      <p class="hero-premium-lead">Professional moving, packing, storage and transportation for homes and businesses across Kenya.</p>
-      <div class="hero-premium-actions">
-        <a class="btn btn-primary" href="#quote">Get a Free Quote <span>→</span></a>
-        <a class="hero-phone" href="tel:+254721383823"><span class="phone-icon">↗</span><span><small>Talk to Mofra</small><b>0721 383 823</b></span></a>
+<section class="hero hero-cinematic" id="home">
+  <div class="hero-cinematic-image" aria-hidden="true">
+    <img src="/assets/images/service-transport.jpg" alt="" loading="eager" fetchpriority="high">
+    <div class="hero-cinematic-image-shade"></div>
+  </div>
+  <div class="hero-cinematic-grid container">
+    <div class="hero-cinematic-copy">
+      <div class="hero-cinematic-kicker"><span></span> MOFRA MOVERS · NAIROBI</div>
+      <h1>Move<br><em>without</em><br>the stress.</h1>
+      <p>Professional moving, packing, storage and transportation for homes, apartments and businesses.</p>
+      <div class="hero-cinematic-actions">
+        <a class="btn btn-primary" href="#quote">Get a Free Quote <b>→</b></a>
+        <a class="hero-cinematic-call" href="tel:+254721383823"><span>Call Mofra</span><strong>0721 383 823</strong></a>
       </div>
-      <div class="hero-services"><span>House moving</span><i></i><span>Office relocation</span><i></i><span>Storage</span></div>
     </div>
-    <div class="hero-premium-media reveal">
-      <div class="hero-photo-frame">
-        <img src="/assets/images/service-transport.jpg" alt="Mofra Movers transportation service" loading="eager" fetchpriority="high">
-        <div class="hero-photo-overlay"></div>
-        <div class="hero-photo-label"><span>MOFRA MOVERS</span><b>01</b></div>
-        <div class="hero-photo-caption"><small>THE MOVE STARTS HERE</small><strong>Handled with care.</strong></div>
-      </div>
-      <div class="hero-location-chip"><span class="chip-dot"></span><div><small>Based in</small><b>Nairobi, Kenya</b></div></div>
-      <div class="hero-year">2007<span>—</span>2026</div>
+    <div class="hero-cinematic-side">
+      <div class="hero-cinematic-tag">MOVING<br><b>MADE SIMPLE</b></div>
+      <div class="hero-cinematic-bottom"><span>01</span><i></i><span>HOUSE · OFFICE · STORAGE</span></div>
     </div>
   </div>
+  <div class="hero-cinematic-line" aria-hidden="true"></div>
 </section>
 
 <section class="section services" id="services">
