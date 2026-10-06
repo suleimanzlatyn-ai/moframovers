@@ -175,9 +175,13 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 .note{color:#777c85;font-size:11px;margin-top:12px}.google-summary{display:flex;align-items:center;gap:18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#101217;margin-bottom:18px}.google-summary strong{font-size:28px}.google-summary .stars{font-size:14px}.google-summary span{color:var(--muted);font-size:12px}.contact-hours{margin-top:15px;padding-top:15px;border-top:1px solid var(--line);color:#bfc2c9;font-size:12px}.contact-hours strong{color:#fff}.source-note{font-size:10px;color:#6f747d;margin-top:12px}
 @media(max-width:950px){.trust-grid{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3),.trust-item:nth-child(4){border-top:1px solid var(--line)}.detail-grid{grid-template-columns:1fr 1fr}.coverage{grid-template-columns:1fr}}
 @media(max-width:620px){.trust-grid{grid-template-columns:1fr 1fr}.trust-item{padding:17px 12px}.detail-grid{grid-template-columns:1fr}.hero-stage{min-height:300px}.hero-card{inset:8px 0 15px 0}.google-summary{align-items:flex-start;gap:10px;flex-wrap:wrap}}
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#ed1c24,#ff6b72);z-index:9999;box-shadow:0 0 14px rgba(237,28,36,.75)}
+.magnetic{transition:transform .2s ease}.hero-pro:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(500px circle at var(--mx,50%) var(--my,30%),rgba(237,28,36,.07),transparent 65%);z-index:-1}
+.service-card{will-change:transform}.hero-image-main:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);transform:translateX(-120%);animation:shine 7s ease-in-out infinite}
+@keyframes shine{0%,55%{transform:translateX(-120%)}72%,100%{transform:translateX(120%)}}
 </style>
 </head>
-<body id="top">
+<body id="top"><div class="scroll-progress" id="scrollProgress"></div>
 <header>
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
@@ -240,12 +244,12 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
   <div class="container">
     <div class="section-head"><div><div class="kicker">What we do</div><h2>Services for the <em>whole move.</em></h2><p class="sub">Explore Mofra Movers service images and swipe sideways on mobile or use the arrows.</p></div></div>
     <div class="service-scroller" id="serviceScroller">
-      <article class="service-card"><img src="/assets/images/service-house.jpg" loading="lazy" decoding="async" alt="House moving service" loading="lazy"><div class="service-content"><span class="service-number">01 · RESIDENTIAL</span><h3>House & Apartment Moving</h3><p>Move furniture, appliances, boxes and household belongings between homes and apartments.</p></div></article>
-      <article class="service-card"><img src="/assets/images/service-office.jpg" loading="lazy" decoding="async" alt="Office relocation service" loading="lazy"><div class="service-content"><span class="service-number">02 · BUSINESS</span><h3>Office Relocation</h3><p>Move desks, equipment, files and office contents with a practical relocation plan.</p></div></article>
-      <article class="service-card"><img src="/assets/images/service-packing.jpg" loading="lazy" decoding="async" alt="Packing and protection service" loading="lazy"><div class="service-content"><span class="service-number">03 · HANDLING</span><h3>Packing & Protection</h3><p>Packing, wrapping and careful handling before loading, transport and unloading.</p></div></article>
-      <article class="service-card"><img src="/assets/images/service-storage.jpg" loading="lazy" decoding="async" alt="Storage service" loading="lazy"><div class="service-content"><span class="service-number">04 · STORAGE</span><h3>Storage</h3><p>Temporary storage support when you are between properties or waiting for a new space.</p></div></article>
-      <article class="service-card"><img src="/assets/images/service-transport.jpg" loading="lazy" decoding="async" alt="Moving transportation service" loading="lazy"><div class="service-content"><span class="service-number">05 · TRANSPORT</span><h3>Transportation</h3><p>Transport for household goods, office contents and larger loads within Nairobi and across Kenya.</p></div></article>
-      <article class="service-card"><img src="/assets/images/service-cross-border.jpg" loading="lazy" decoding="async" alt="Mofra Movers cross-border moving and transportation service" loading="lazy"><div class="service-content"><span class="service-number">06 · EAST AFRICA</span><h3>Cross-Border Moving</h3><p>Moving and transportation support involving Kenya and selected East African routes.</p></div></article>
+      <h3>House & Apartment Moving</h3><p>Move furniture, appliances, boxes and household belongings between homes and apartments.</p></div></article>
+      
+      <article class="service-card"><img src="/assets/images/service-packing.jpg" loading="lazy" decoding="async" alt="Packing and protection service" loading="lazy"><div class="service-content"><span class="service-number">2 · HANDLING</span><h3>Packing & Protection</h3><p>Packing, wrapping and careful handling before loading, transport and unloading.</p></div></article>
+      <article class="service-card"><img src="/assets/images/service-storage.jpg" loading="lazy" decoding="async" alt="Storage service" loading="lazy"><div class="service-content"><span class="service-number">3 · STORAGE</span><h3>Storage</h3><p>Temporary storage support when you are between properties or waiting for a new space.</p></div></article>
+      <article class="service-card"><img src="/assets/images/service-transport.jpg" loading="lazy" decoding="async" alt="Moving transportation service" loading="lazy"><div class="service-content"><span class="service-number">4 · TRANSPORT</span><h3>Transportation</h3><p>Transport for household goods, office contents and larger loads within Nairobi and across Kenya.</p></div></article>
+      
     </div>
     <div class="scroll-note"><span>← Swipe / drag sideways to explore →</span><span class="scroll-arrows"><button type="button" id="prevService" aria-label="Previous services">←</button><button type="button" id="nextService" aria-label="Next services">→</button></span></div>
   </div>
@@ -356,7 +360,15 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 
   // Premium reveal animation and graceful image fallback.
   const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});
-  document.querySelectorAll('section:not(.hero),.trust-strip').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el);});
+  document.querySelectorAll('section:not(.hero),.trust-strip').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el);}); document.querySelectorAll('.hero .reveal').forEach(el=>el.classList.add('visible'));
+  const progress=document.getElementById('scrollProgress');
+  const updateProgress=()=>{if(progress){const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?(scrollY/h)*100:0)+'%';}};
+  addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
+  const hero=document.querySelector('.hero-pro');
+  if(hero){hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--mx',(e.clientX-r.left)+'px');hero.style.setProperty('--my',(e.clientY-r.top)+'px');});}
+  document.querySelectorAll('.btn-primary').forEach(btn=>btn.classList.add('magnetic'));
+  document.querySelectorAll('.magnetic').forEach(btn=>btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.08)+'px,'+((e.clientY-r.top-r.height/2)*.08)+'px)';}));
+  document.querySelectorAll('.magnetic').forEach(btn=>btn.addEventListener('pointerleave',()=>btn.style.transform=''));
   document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.style.opacity='0';},{once:true}));
 })();
 </script>
