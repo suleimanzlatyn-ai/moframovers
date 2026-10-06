@@ -179,6 +179,54 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 .magnetic{transition:transform .2s ease}.hero-pro:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(500px circle at var(--mx,50%) var(--my,30%),rgba(237,28,36,.07),transparent 65%);z-index:-1}
 .service-card{will-change:transform}.hero-image-main:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.13) 45%,transparent 60%);transform:translateX(-120%);animation:shine 7s ease-in-out infinite}
 @keyframes shine{0%,55%{transform:translateX(-120%)}72%,100%{transform:translateX(120%)}}
+
+/* Executive-level hero + location + conversion refinements */
+.hero-pro{background:
+  radial-gradient(ellipse 75% 85% at 88% 48%,rgba(237,28,36,.13),transparent 58%),
+  radial-gradient(ellipse 55% 65% at 4% 12%,rgba(255,255,255,.045),transparent 60%);}
+.hero-pro:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent 80%);}
+.hero-pro .hero-grid{position:relative;z-index:2}
+.hero-pro .hero-copy{max-width:680px}
+.hero-pro .eyebrow{padding:8px 11px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.035);backdrop-filter:blur(10px)}
+.hero-pro h1{max-width:720px}
+.hero-pro h1 .hero-line{display:block}
+.hero-pro .lead{max-width:610px}
+.hero-trust-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+.hero-trust-pill{display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.10);color:#c4c7ce;font-size:10px;font-weight:800}
+.hero-trust-pill b{color:#fff}
+.hero-trust-dot{width:6px;height:6px;border-radius:50%;background:#52df88;box-shadow:0 0 12px rgba(82,223,136,.8)}
+.hero-location-card{position:absolute;right:16px;bottom:18px;z-index:5;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(8,9,12,.88);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);box-shadow:0 20px 55px rgba(0,0,0,.42)}
+.hero-location-card .pin{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(237,28,36,.14);color:#ff5860}
+.hero-location-card strong{display:block;font-size:11px}.hero-location-card small{display:block;color:#858a94;font-size:9px;margin-top:2px}
+.hero-location-card a{color:#fff;text-decoration:underline;text-decoration-color:rgba(237,28,36,.65);text-underline-offset:3px}
+.hero-route{position:absolute;left:0;top:48px;z-index:4;padding:10px 12px;border-left:2px solid var(--red);background:rgba(7,8,10,.72);backdrop-filter:blur(12px);font-size:9px;color:#aeb2ba;letter-spacing:.08em;text-transform:uppercase}
+.hero-route b{display:block;color:#fff;font-size:10px;margin-top:2px}
+.hero-stamp{position:absolute;left:24px;top:24px;z-index:3;width:72px;height:72px;border-radius:50%;border:1px dashed rgba(255,255,255,.24);display:grid;place-items:center;text-align:center;font-size:8px;font-weight:950;letter-spacing:.08em;line-height:1.1;background:rgba(0,0,0,.22);backdrop-filter:blur(8px);transform:rotate(-9deg)}
+.hero-stamp span{display:block;color:#ff6970;font-size:15px;letter-spacing:-.04em}
+.hero-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px;max-width:610px}
+.hero-metric{padding:12px 13px;border-top:1px solid rgba(255,255,255,.16);background:linear-gradient(180deg,rgba(255,255,255,.035),transparent);border-radius:10px 10px 0 0}
+.hero-metric strong{display:block;font-size:18px;letter-spacing:-.04em}.hero-metric span{display:block;color:#777d87;font-size:9px;margin-top:2px}
+.location-section{padding-top:30px}
+.location-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}
+.location-card,.map-card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#15181e,#0c0e12);overflow:hidden}
+.location-card{padding:30px}
+.location-card h3{font-size:28px;letter-spacing:-.04em;margin:7px 0 12px}.location-card p{color:var(--muted)}
+.location-detail{display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--line)}.location-detail .loc-icon{flex:0 0 36px;height:36px;border-radius:10px;background:rgba(237,28,36,.12);display:grid;place-items:center;color:#ff5b63}
+.location-detail b{display:block;font-size:12px}.location-detail span{display:block;color:#8c919b;font-size:11px;margin-top:2px}
+.map-card{min-height:330px;position:relative;background:
+ radial-gradient(circle at 62% 45%,rgba(237,28,36,.22),transparent 18%),
+ linear-gradient(135deg,#11151a,#090b0e);}
+.map-grid{position:absolute;inset:0;opacity:.55;background-image:linear-gradient(28deg,transparent 48%,rgba(255,255,255,.08) 49%,transparent 50%),linear-gradient(118deg,transparent 48%,rgba(255,255,255,.07) 49%,transparent 50%),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:130px 90px,150px 110px,55px 55px,55px 55px}
+.map-route{position:absolute;left:12%;right:13%;top:54%;height:2px;background:linear-gradient(90deg,transparent,#ed1c24 18%,#ff5d65 65%,transparent);transform:rotate(-17deg);box-shadow:0 0 18px rgba(237,28,36,.55)}
+.map-pin{position:absolute;left:57%;top:43%;width:18px;height:18px;border-radius:50%;background:#ed1c24;box-shadow:0 0 0 7px rgba(237,28,36,.12),0 0 30px rgba(237,28,36,.7);animation:mapPulse 2s ease-out infinite}
+.map-label{position:absolute;left:59%;top:33%;padding:8px 11px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:rgba(8,9,12,.82);backdrop-filter:blur(10px);font-size:10px}.map-label b{display:block;color:#fff}.map-label span{color:#818791;font-size:8px}
+.map-card .map-caption{position:absolute;left:20px;bottom:18px;color:#858a93;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.social-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.social-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:#0e1014;font-size:11px;font-weight:900}.social-btn:hover{border-color:rgba(237,28,36,.6);transform:translateY(-2px)}.social-btn.fb{background:#1877f2;border-color:#1877f2}.social-btn svg{width:16px;height:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature-card{position:relative;padding:23px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#13161b,#0c0e12);overflow:hidden;transition:.25s}.feature-card:hover{transform:translateY(-5px);border-color:rgba(237,28,36,.42);box-shadow:0 20px 50px rgba(0,0,0,.25)}.feature-card:before{content:"";position:absolute;width:90px;height:90px;right:-35px;top:-35px;border-radius:50%;background:rgba(237,28,36,.12);filter:blur(8px)}.feature-icon{width:42px;height:42px;border-radius:12px;background:rgba(237,28,36,.11);display:grid;place-items:center;color:#ff5c64;font-size:18px;margin-bottom:14px}.feature-card h3{margin:0 0 6px;font-size:17px}.feature-card p{margin:0;color:#8e939c;font-size:12px}
+@keyframes mapPulse{0%{box-shadow:0 0 0 0 rgba(237,28,36,.5)}70%{box-shadow:0 0 0 18px rgba(237,28,36,0)}100%{box-shadow:0 0 0 0 rgba(237,28,36,0)}}
+@media(max-width:950px){.location-wrap{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}.hero-location-card{right:8px}.hero-route{left:8px}}
+@media(max-width:620px){.hero-pro{min-height:auto;padding-top:32px}.hero-pro .hero-copy{padding-bottom:18px}.hero-trust-row{margin-top:18px}.hero-metrics{grid-template-columns:1fr 1fr}.hero-metric:last-child{grid-column:1/-1}.hero-location-card{right:10px;bottom:10px;padding:9px 10px}.hero-location-card small{display:none}.hero-route{top:14px;font-size:8px}.hero-stamp{left:15px;top:15px;width:60px;height:60px}.feature-grid{grid-template-columns:1fr}.location-card{padding:22px}.map-card{min-height:270px}}
+
 </style>
 </head>
 <body id="top"><div class="scroll-progress" id="scrollProgress"></div>
@@ -207,19 +255,23 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <div class="eyebrow"><i></i> NAIROBI · KENYA · EAST AFRICA</div>
-      <h1>Move <em>smarter.</em><br>Move with Mofra.</h1>
+      <div class="hero-route">HEADQUARTERS <b>NAIROBI, KENYA</b></div>
+      <h1>Moving is stressful.<br><em>We make it simple.</em></h1>
       <p class="lead">Professional house moving, office relocation, packing, storage and transportation — planned carefully from pickup to delivery.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-glow" href="#quote">Get a Free Quote <span>→</span></a>
         <a class="btn btn-dark" href="tel:+254721383823">Call 0721 383 823</a>
       </div>
+      <div class="hero-trust-row"><span class="hero-trust-pill"><i class="hero-trust-dot"></i><b>Professional</b> moving support</span><span class="hero-trust-pill">📍 <b>Nairobi</b> · Kenya</span><span class="hero-trust-pill">✦ <b>2007</b> established</span></div>
       <div class="hero-mini-proof">
         <span><b>Since 2007</b>Trusted moving experience</span>
         <span><b>Kenya + EA</b>Selected regional routes</span>
         <span><b>WhatsApp</b>Easy quote requests</span>
       </div>
+      <div class="hero-metrics"><div class="hero-metric"><strong>Homes</strong><span>Residential relocation</span></div><div class="hero-metric"><strong>Offices</strong><span>Business moves</span></div><div class="hero-metric"><strong>East Africa</strong><span>Selected regional routes</span></div></div>
     </div>
     <div class="hero-visual reveal">
+      <div class="hero-stamp"><span>17+</span>YEARS<br>OF MOVING</div>
       <div class="visual-glow"></div>
       <div class="hero-image-main">
         <img src="/assets/images/service-transport.jpg" fetchpriority="high" decoding="async" alt="Mofra Movers transportation and moving service">
@@ -232,6 +284,7 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
         <div><b>Moving made simple</b><small>Plan · Pack · Move · Settle</small></div>
       </div>
       <div class="hero-accent-card"><span>01</span><b>HOUSE<br>TO<br>OFFICE</b></div>
+      <div class="hero-location-card"><div class="pin">⌖</div><div><strong>Nairobi Headquarters</strong><small><a href="https://www.google.com/maps/search/?api=1&query=George+Padmore+Lane+off+Ngong+Road+Nairobi" target="_blank" rel="noopener">Get directions ↗</a></small></div></div>
     </div>
   </div>
   <div class="hero-bottom-line"><div class="container"><span>MOVE WITH CONFIDENCE</span><i></i><span>PACKING</span><i></i><span>STORAGE</span><i></i><span>TRANSPORT</span><i></i><span>RELOCATION</span></div></div>
@@ -254,7 +307,44 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 
 <section class="section" id="about"><div class="container"><div class="section-head"><div><div class="kicker">About Mofra Movers</div><h2>A moving partner built around <em>the whole move.</em></h2></div></div><div class="split"><div class="panel"><h3>Who Mofra Movers is</h3><p>Mofra Movers is a Nairobi-based moving and storage company. Public business profiles describe the company as serving residential and commercial customers with moving, relocation, packing, storage and transportation services, including selected routes across East Africa.</p><ul><li>Home, apartment and office relocation</li><li>Packing and careful transport support</li><li>Storage solutions</li><li>Transportation within Kenya</li><li>Selected cross-border and overseas moving support</li></ul></div><div class="panel"><h3>Mission & vision</h3><p>The company's public profile emphasizes respect and dedication in its staff, practical solutions for client needs, reliability, safety and timely service.</p><ul><li>Respectful, dedicated service</li><li>Solution-focused planning</li><li>Safe and reliable handling</li><li>Fast, organized execution</li></ul></div></div></div></section>
 <section class="section" id="services-detail"><div class="container"><div class="section-head"><div><div class="kicker">What we do</div><h2>Moving services, <em>clearly explained.</em></h2><p class="sub">Choose the service that matches your move. The quote process lets you explain the size, locations, date and special requirements.</p></div></div><div class="detail-grid"><article class="detail-card"><div class="icon">🏠</div><h3>House Moving</h3><p>Residential relocation for homes and apartments, including loading, transportation and unloading planning.</p></article><article class="detail-card"><div class="icon">🏢</div><h3>Office Relocation</h3><p>Move office furniture, files and equipment with a structured pickup, transport and delivery plan.</p></article><article class="detail-card"><div class="icon">📦</div><h3>Packing</h3><p>Packing support for customers who want help preparing household or office items for transportation.</p></article><article class="detail-card"><div class="icon">🗄️</div><h3>Storage</h3><p>Storage support for customers who need their belongings held temporarily during a move or transition.</p></article><article class="detail-card"><div class="icon">🚚</div><h3>Transportation</h3><p>Transportation for moving loads between pickup and destination locations within Kenya.</p></article><article class="detail-card"><div class="icon">🌍</div><h3>Cross-Border & Overseas</h3><p>Public company profiles list cross-border and overseas moving among Mofra's services; ask for route-specific requirements and pricing.</p></article></div></div></section>
-<section class="section" id="coverage"><div class="container"><div class="section-head"><div><div class="kicker">Where we operate</div><h2>Nairobi first. <em>East Africa beyond.</em></h2></div></div><div class="coverage"><div class="coverage-card"><div class="kicker">Kenya</div><h3>Moving across Nairobi and Kenya</h3><p class="sub">Mofra's public profiles describe the company as Nairobi-based and operating across Kenya. Tell us your pickup and destination when requesting a quote.</p><div class="coverage-list"><span>Nairobi</span><span>Kenya-wide</span><span>House moves</span><span>Office moves</span><span>Transportation</span></div></div><div class="coverage-card"><div class="kicker">East Africa</div><h3>Selected regional routes</h3><p class="sub">Public company information identifies Uganda, Tanzania and Rwanda among its regional routes. Route availability should be confirmed for your specific move.</p><div class="coverage-list"><span>Uganda</span><span>Tanzania</span><span>Rwanda</span><span>Cross-border</span><span>Overseas enquiries</span></div></div></div></div></section><section class="section" id="process">
+
+<section class="section location-section" id="location">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Find Mofra</div><h2>Right here in <em>Nairobi.</em></h2><p class="sub">Visit the Nairobi office or open directions before your appointment.</p></div><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=George+Padmore+Lane+off+Ngong+Road+opposite+Uchumi+Hyper+Dove+Centre+Nairobi" target="_blank" rel="noopener">Open directions ↗</a></div>
+    <div class="location-wrap">
+      <div class="location-card">
+        <div class="kicker">Nairobi headquarters</div><h3>George Padmore Lane, off Ngong Road</h3>
+        <p>Public business listings place Mofra Movers around George Padmore Lane / Ngong Road, opposite Uchumi Hyper, Dove Centre, Nairobi. Confirm the exact office point before visiting. citeturn2search0turn2search2</p>
+        <div class="location-detail"><div class="loc-icon">⌖</div><div><b>Physical location</b><span>George Padmore Lane, off Ngong Road, opposite Uchumi Hyper, Dove Centre, Nairobi</span></div></div>
+        <div class="location-detail"><div class="loc-icon">☎</div><div><b>Call</b><span><a href="tel:+254721383823">0721 383 823</a></span></div></div>
+        <div class="social-row">
+          <a class="social-btn fb" href="https://www.facebook.com/search/pages/?q=Mofra%20Movers%20Kenya" target="_blank" rel="noopener" aria-label="Find Mofra Movers on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H7.7v3H10v8h3.5Z"/></svg> Find us on Facebook</a>
+          <a class="social-btn" href="https://wa.me/254721383823" target="_blank" rel="noopener">WhatsApp ↗</a>
+        </div>
+      </div>
+      <div class="map-card" aria-label="Stylized location map">
+        <div class="map-grid"></div><div class="map-route"></div><div class="map-pin"></div><div class="map-label"><b>Mofra Movers</b><span>Ngong Road · Nairobi</span></div><div class="map-caption">NAIROBI · KENYA · EAST AFRICA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="coverage"><div class="container"><div class="section-head"><div><div class="kicker">Where we operate</div><h2>Nairobi first. <em>East Africa beyond.</em></h2></div></div><div class="coverage"><div class="coverage-card"><div class="kicker">Kenya</div><h3>Moving across Nairobi and Kenya</h3><p class="sub">Mofra's public profiles describe the company as Nairobi-based and operating across Kenya. Tell us your pickup and destination when requesting a quote.</p><div class="coverage-list"><span>Nairobi</span><span>Kenya-wide</span><span>House moves</span><span>Office moves</span><span>Transportation</span></div></div><div class="coverage-card"><div class="kicker">East Africa</div><h3>Selected regional routes</h3><p class="sub">Public company information identifies Uganda, Tanzania and Rwanda among its regional routes. Route availability should be confirmed for your specific move.</p><div class="coverage-list"><span>Uganda</span><span>Tanzania</span><span>Rwanda</span><span>Cross-border</span><span>Overseas enquiries</span></div></div></div></div></section>
+<section class="section" id="why-mofra">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Why the experience feels different</div><h2>More than a truck. <em>A moving system.</em></h2><p class="sub">The website now makes the journey clearer — from first enquiry to delivery.</p></div></div>
+    <div class="feature-grid">
+      <article class="feature-card"><div class="feature-icon">01</div><h3>Clear planning</h3><p>Tell the team where you are moving from, where you are going, the load size and the support you need.</p></article>
+      <article class="feature-card"><div class="feature-icon">02</div><h3>Quote in one tap</h3><p>Your enquiry form builds a structured WhatsApp message so you can send the important details without rewriting them.</p></article>
+      <article class="feature-card"><div class="feature-icon">03</div><h3>Mobile-first contact</h3><p>Call and WhatsApp actions stay easy to reach on phones, where many moving enquiries begin.</p></article>
+      <article class="feature-card"><div class="feature-icon">04</div><h3>Route clarity</h3><p>Nairobi is presented as the base, with Kenya-wide and selected East African routes clearly separated.</p></article>
+      <article class="feature-card"><div class="feature-icon">05</div><h3>Service detail</h3><p>House moving, office relocation, packing, storage and transportation each have their own explanation.</p></article>
+      <article class="feature-card"><div class="feature-icon">06</div><h3>Professional presentation</h3><p>Premium motion, structured information, strong hierarchy and restrained red accents create a more credible first impression.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
   <div class="container"><div class="section-head"><div><div class="kicker">Simple process</div><h2>Four steps. <em>One move.</em></h2></div></div>
   <div class="process"><div class="step"><b>01</b><h3>Tell us</h3><p>Share your pickup, destination, move type and preferred date.</p></div><div class="step"><b>02</b><h3>Plan</h3><p>Confirm the load, access, packing and transportation requirements.</p></div><div class="step"><b>03</b><h3>Move</h3><p>The moving team handles loading, transportation and unloading.</p></div><div class="step"><b>04</b><h3>Settle in</h3><p>Complete delivery and confirm that the move is finished.</p></div></div></div>
 </section>
@@ -305,7 +395,7 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 </section>
 </main>
 
-<footer><div class="container footer-grid"><div><div class="footer-title">MOFRA MOVERS</div><div>Moving, relocation, packing, storage and transportation across Kenya and selected East African routes.</div><div class="source-note">Business facts on this page are based on publicly available company and business-listing information and should be confirmed with Mofra Movers before publication of any regulated or time-sensitive claim.</div></div><div><div class="footer-title">Explore</div><div><a href="#services">Services</a> · <a href="#gallery">Gallery</a> · <a href="#quote">Quote</a></div></div><div><div class="footer-title">Contact</div><div><a href="tel:+254721383823">0721 383 823</a> · <a href="mailto:Moframoverscs@gmail.com">Moframoverscs@gmail.com</a></div></div></div></footer>
+<footer><div class="container footer-grid"><div><div class="footer-title">MOFRA MOVERS</div><div>Moving, relocation, packing, storage and transportation across Kenya and selected East African routes.</div><div class="source-note">Business facts on this page are based on publicly available company and business-listing information and should be confirmed with Mofra Movers before publication of any regulated or time-sensitive claim.</div></div><div><div class="footer-title">Explore</div><div><a href="#services">Services</a> · <a href="#location">Location</a> · <a href="#gallery">Gallery</a> · <a href="#quote">Quote</a></div></div><div><div class="footer-title">Contact</div><div><a href="tel:+254721383823">0721 383 823</a> · <a href="mailto:Moframoverscs@gmail.com">Moframoverscs@gmail.com</a></div><div class="social-row"><a class="social-btn" href="https://www.facebook.com/search/pages/?q=Mofra%20Movers%20Kenya" target="_blank" rel="noopener">Facebook ↗</a></div></div></div></footer>
 
 <a class="floating call" href="tel:+254721383823" aria-label="Call Mofra Movers"><svg viewBox="0 0 24 24" fill="none"><path d="M7.2 3.5 9.6 3c.7-.1 1.3.3 1.5.9l1.1 3.2c.2.6 0 1.2-.5 1.5L10 9.8c1 2.2 2.8 4 5 5l1.2-1.7c.3-.5.9-.7 1.5-.5l3.2 1.1c.6.2 1 .8.9 1.5l-.5 2.4c-.2 1-1.1 1.7-2.1 1.7C11.4 19.3 4.7 12.6 4.7 4.8c0-1 .7-1.9 1.7-2.1Z" stroke="currentColor" stroke-width="1.8"/></svg></a>
 <a class="floating whatsapp" href="https://wa.me/254721383823?text=Hello%20Mofra%20Movers%2C%20I%20would%20like%20a%20moving%20quote." target="_blank" rel="noopener" aria-label="WhatsApp Mofra Movers"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.9 11.9 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.4ZM12.06 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.9 9.9 0 1 1 8.38 4.62Zm5.43-7.42c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.71.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></a>
