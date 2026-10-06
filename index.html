@@ -253,6 +253,44 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 .hero-pro .hero-image-main:after{display:none!important}
 @media(max-width:950px){.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:30px!important}.hero-pro .hero-visual{order:-1;min-height:400px!important}.hero-pro .hero-image-main{height:400px!important}}
 @media(max-width:620px){.hero-pro{padding:34px 0 20px!important}.hero-pro h1{font-size:47px!important}.hero-pro .hero-visual{min-height:310px!important}.hero-pro .hero-image-main{height:310px!important;border-radius:18px!important}.hero-pro .hero-copy{padding-bottom:10px!important}}
+
+/* Refined hero: premium visual composition without the large hero photo */
+.hero-pro{min-height:700px!important;padding:64px 0 0!important;background:#08090b!important}
+.hero-pro .hero-grid{grid-template-columns:1fr 1fr!important;gap:58px!important;min-height:610px!important}
+.hero-pro .hero-copy{padding-bottom:55px!important;max-width:650px!important}
+.hero-pro h1{font-size:clamp(54px,6.7vw,90px)!important;line-height:.91!important;letter-spacing:-.065em!important}
+.hero-pro h1 em{background:linear-gradient(100deg,#fff 10%,#ff3d46 72%,#ed1c24 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.hero-pro .lead{font-size:18px!important;line-height:1.65!important;max-width:570px!important}
+.hero-pro .hero-visual{min-height:570px!important}
+.hero-pro .hero-image-main,.hero-pro .hero-image-top,.hero-pro .hero-image-bottom{display:none!important}
+.hero-stage-pro{position:relative;width:min(600px,100%);height:535px;margin:auto;display:grid;place-items:center}
+.hero-stage-grid{position:absolute;inset:35px 20px 25px 20px;border:1px solid rgba(255,255,255,.08);border-radius:32px;transform:perspective(900px) rotateY(-7deg) rotateX(3deg);background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012));box-shadow:0 35px 90px rgba(0,0,0,.55)}
+.hero-stage-grid:before{content:"";position:absolute;inset:0;border-radius:32px;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
+.hero-main-panel{position:absolute;left:60px;right:60px;top:90px;bottom:78px;border:1px solid rgba(255,255,255,.14);border-radius:24px;background:linear-gradient(145deg,#15181e,#0b0d11);box-shadow:0 25px 70px rgba(0,0,0,.45);overflow:hidden}
+.panel-top{height:58px;padding:0 20px;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(255,255,255,.08);font-size:9px;letter-spacing:.13em}
+.panel-top .live{width:7px;height:7px;border-radius:50%;background:#41e17b;box-shadow:0 0 14px #41e17b}
+.panel-top span:last-child{margin-left:auto;color:#7e838d}
+.panel-content{padding:48px 34px 25px}
+.panel-content small{color:#ff5961;font-size:9px;font-weight:900;letter-spacing:.17em}
+.panel-content strong{display:block;font-size:clamp(32px,4vw,52px);line-height:.96;letter-spacing:-.055em;margin:14px 0 17px}
+.panel-content p{color:#969ba5;font-size:12px;line-height:1.6;max-width:360px}
+.panel-route{position:absolute;left:34px;right:34px;bottom:22px;display:flex;align-items:center;gap:12px;color:#d6d8dc;font-size:10px;font-weight:800}
+.panel-route i{height:1px;flex:1;background:linear-gradient(90deg,var(--red),rgba(255,255,255,.12))}
+.route-line{position:absolute;left:40px;right:40px;top:55px;height:440px;pointer-events:none}
+.route-line span,.route-line b{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--red);box-shadow:0 0 0 7px rgba(237,28,36,.1),0 0 25px rgba(237,28,36,.5)}
+.route-line span{left:18px;bottom:35px}.route-line b{right:12px;top:35px}
+.route-line i{position:absolute;left:24px;right:18px;top:220px;height:2px;background:linear-gradient(90deg,var(--red),rgba(237,28,36,.18),var(--red));transform:rotate(-24deg);transform-origin:center}
+.route-label{position:absolute;color:#777d87;font-size:8px;font-weight:900;letter-spacing:.17em}
+.route-a{left:34px;bottom:74px}.route-b{right:30px;top:82px}
+.hero-float-card{left:12px!important;bottom:42px!important;z-index:8}
+.hero-accent-card{right:14px!important;top:62px!important;z-index:8}
+.hero-quote-card{left:18px!important;bottom:0!important;z-index:9}
+.hero-orb{pointer-events:none}
+.orb-one{width:250px;height:250px;right:-40px;top:40px;background:radial-gradient(circle,rgba(237,28,36,.18),transparent 70%)}
+.orb-two{width:190px;height:190px;left:-55px;bottom:25px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent 70%)}
+@media(max-width:950px){.hero-pro{min-height:auto!important;padding:62px 0 30px!important}.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:24px!important}.hero-pro .hero-copy{padding-bottom:10px!important}.hero-pro .hero-visual{min-height:520px!important}.hero-stage-pro{height:500px}.hero-main-panel{left:50px;right:50px}.hero-quote-card{left:10px!important}.hero-accent-card{right:0!important}}
+@media(max-width:620px){.hero-pro{padding:34px 0 18px!important}.hero-pro h1{font-size:48px!important}.hero-pro .lead{font-size:15px!important}.hero-pro .hero-visual{min-height:410px!important}.hero-stage-pro{height:390px}.hero-stage-grid{inset:15px 4px 18px}.hero-main-panel{left:25px;right:25px;top:55px;bottom:55px;border-radius:19px}.panel-top{height:45px;padding:0 13px;font-size:7px}.panel-content{padding:30px 20px 20px}.panel-content strong{font-size:34px}.panel-content p{font-size:10px}.panel-route{left:20px;right:20px;bottom:17px}.route-line{left:15px;right:15px;top:35px;height:320px}.route-label{font-size:7px}.hero-float-card{left:0!important;bottom:10px!important;padding:10px 12px!important}.hero-accent-card{right:0!important;top:25px!important;width:72px!important;height:84px!important;padding:11px!important}.hero-quote-card{left:8px!important;bottom:-4px!important;width:205px!important;padding:13px!important}.hero-quote-card b{font-size:12px}.hero-quote-card small{font-size:8px}}
+
 </style>
 </head>
 <body id="top"><div class="scroll-progress" id="scrollProgress"></div>
@@ -296,21 +334,28 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
       </div>
       <div class="hero-metrics"><div class="hero-metric"><strong>Homes</strong><span>Residential relocation</span></div><div class="hero-metric"><strong>Offices</strong><span>Business moves</span></div><div class="hero-metric"><strong>East Africa</strong><span>Selected regional routes</span></div></div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="hero-stamp"><span>17+</span>YEARS<br>OF MOVING</div>
+    <div class="hero-visual reveal" aria-label="Mofra Movers moving services">
       <div class="visual-glow"></div>
-      <div class="hero-number"><strong>2007</strong>ESTABLISHED</div><div class="hero-image-main">
-        <img src="/assets/images/service-transport.jpg" fetchpriority="high" decoding="async" alt="Mofra Movers transportation and moving service">
-        <div class="hero-image-shade"></div>
-        <div class="hero-image-top"><span class="live"></span><b>MOFRA MOVERS</b><span class="status">READY TO MOVE</span></div>
-        <div class="hero-image-bottom"><small>Professional moving & relocation</small><strong>Your move. Properly planned.</strong></div>
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="hero-stage-pro">
+        <div class="hero-stage-grid"></div>
+        <div class="route-line"><span></span><i></i><b></b></div>
+        <div class="route-label route-a">PICKUP</div>
+        <div class="route-label route-b">DELIVERY</div>
+        <div class="hero-main-panel">
+          <div class="panel-top"><span class="live"></span><b>MOFRA MOVERS</b><span>RELOCATION</span></div>
+          <div class="panel-content">
+            <small>YOUR MOVE, PROPERLY PLANNED.</small>
+            <strong>From door<br>to destination.</strong>
+            <p>House moves · Office relocation · Packing · Storage · Transport</p>
+          </div>
+          <div class="panel-route"><span>Nairobi</span><i></i><span>Kenya</span></div>
+        </div>
+        <div class="hero-float-card"><span class="float-icon">✓</span><div><b>Moving made simple</b><small>Plan · Pack · Move · Settle</small></div></div>
+        <div class="hero-accent-card"><span>01</span><b>HOUSE<br>TO<br>OFFICE</b></div>
+        <div class="hero-quote-card"><span>THE MOFRA STANDARD</span><b>Plan it. Protect it. Move it.</b><small>Professional relocation support from pickup to delivery.</small></div>
       </div>
-      <div class="hero-quote-card"><span>THE MOFRA STANDARD</span><b>Plan it. Protect it. Move it.</b><small>Professional relocation support from pickup to delivery.</small></div><div class="hero-side-label">MOVING · RELOCATION · TRANSPORT</div><div class="hero-float-card">
-        <span class="float-icon">✓</span>
-        <div><b>Moving made simple</b><small>Plan · Pack · Move · Settle</small></div>
-      </div>
-      <div class="hero-accent-card"><span>01</span><b>HOUSE<br>TO<br>OFFICE</b></div>
-      <div class="hero-location-card"><div class="pin">⌖</div><div><strong>Mofra Movers</strong><small><a href="https://www.google.com/maps/search/?api=1&query=Mofra+Movers+Kenya&query_place_id=ChIJmSVfo8ccLxgROldRz9LyaxQ" target="_blank" rel="noopener">Get directions ↗</a></small></div></div>
     </div>
   </div>
   <div class="hero-bottom-line"><div class="container"><span>MOVE WITH CONFIDENCE</span><i></i><span>PACKING</span><i></i><span>STORAGE</span><i></i><span>TRANSPORT</span><i></i><span>RELOCATION</span></div></div>
