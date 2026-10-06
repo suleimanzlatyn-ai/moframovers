@@ -126,6 +126,47 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
 /* Professional production refinements */
+/* Premium visual upgrade */
+.hero-pro{min-height:680px;padding:72px 0 0;position:relative;isolation:isolate}
+.hero-pro .hero-grid{grid-template-columns:.92fr 1.08fr;gap:55px;min-height:590px}
+.hero-pro .hero-copy{padding-bottom:80px}
+.hero-pro h1{font-size:clamp(52px,6.5vw,88px);line-height:.91;letter-spacing:-.065em;margin:20px 0 24px}
+.hero-pro h1 em{background:linear-gradient(110deg,#fff 0%,#ff6970 42%,#ed1c24 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-pro .lead{font-size:18px;line-height:1.7;max-width:590px}
+.btn-glow{box-shadow:0 0 0 1px rgba(255,255,255,.06),0 16px 45px rgba(237,28,36,.28)}
+.btn-glow:hover{box-shadow:0 0 0 1px rgba(255,255,255,.12),0 18px 55px rgba(237,28,36,.38)}
+.hero-mini-proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;color:#7f848e;font-size:10px}
+.hero-mini-proof span{display:grid;gap:2px;padding-left:12px;border-left:1px solid rgba(255,255,255,.14)}
+.hero-mini-proof b{color:#fff;font-size:12px}
+.hero-visual{position:relative;min-height:575px;display:flex;align-items:center;justify-content:center}
+.visual-glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(237,28,36,.24),rgba(237,28,36,.04) 42%,transparent 70%);filter:blur(18px);animation:pulseGlow 5s ease-in-out infinite}
+.hero-image-main{position:relative;width:min(650px,100%);height:500px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 35px 100px rgba(0,0,0,.52);transform:rotate(-1.5deg);transition:transform .5s ease,box-shadow .5s ease}
+.hero-image-main:hover{transform:rotate(0deg) translateY(-6px);box-shadow:0 45px 115px rgba(0,0,0,.6)}
+.hero-image-main img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.98) contrast(1.04);transform:scale(1.01)}
+.hero-image-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06) 20%,rgba(0,0,0,.88) 100%),linear-gradient(90deg,rgba(0,0,0,.28),transparent 55%)}
+.hero-image-top{position:absolute;top:20px;left:20px;right:20px;display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.12em}
+.hero-image-top .status{margin-left:auto}
+.hero-image-bottom{position:absolute;left:25px;right:25px;bottom:25px}
+.hero-image-bottom small{display:block;color:#c9cbd0;font-size:11px;margin-bottom:5px}.hero-image-bottom strong{font-size:27px;letter-spacing:-.035em}
+.hero-float-card{position:absolute;left:-18px;bottom:58px;display:flex;gap:11px;align-items:center;padding:14px 17px;border:1px solid rgba(255,255,255,.14);border-radius:15px;background:rgba(14,16,20,.84);backdrop-filter:blur(16px);box-shadow:0 18px 50px rgba(0,0,0,.4);animation:floatCard 4.5s ease-in-out infinite}
+.float-icon{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:rgba(237,28,36,.15);color:#ff5d65;font-weight:950}
+.hero-float-card b{display:block;font-size:12px}.hero-float-card small{display:block;color:#858a94;font-size:9px;margin-top:2px}
+.hero-accent-card{position:absolute;right:-12px;top:78px;width:92px;height:108px;border-radius:18px;background:linear-gradient(145deg,#ed1c24,#8e1015);padding:15px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 55px rgba(237,28,36,.28);transform:rotate(5deg)}
+.hero-accent-card span{font-size:9px;opacity:.75}.hero-accent-card b{font-size:11px;line-height:1.05;letter-spacing:.08em}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:-1}.orb-one{width:260px;height:260px;right:-90px;top:100px;background:radial-gradient(circle,rgba(237,28,36,.13),transparent 68%)}.orb-two{width:180px;height:180px;left:-90px;bottom:100px;background:radial-gradient(circle,rgba(255,255,255,.05),transparent 68%)}
+.hero-bottom-line{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,11,14,.72);backdrop-filter:blur(12px)}
+.hero-bottom-line .container{min-height:58px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;color:#7e838c;font-size:9px;font-weight:900;letter-spacing:.16em}
+.hero-bottom-line i{width:4px;height:4px;border-radius:50%;background:var(--red);box-shadow:0 0 10px rgba(237,28,36,.8)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+.service-card,.panel,.detail-card,.coverage-card,.review,.contact-card,.quote{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.service-card:hover,.panel:hover,.detail-card:hover,.coverage-card:hover,.review:hover,.contact-card:hover{transform:translateY(-5px);border-color:rgba(237,28,36,.35);box-shadow:0 18px 50px rgba(0,0,0,.2)}
+.kicker{letter-spacing:.2em}
+@keyframes pulseGlow{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.04);opacity:1}}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:950px){.hero-pro .hero-grid{grid-template-columns:1fr}.hero-pro .hero-copy{padding-bottom:10px}.hero-visual{min-height:470px}.hero-accent-card{right:0}.hero-float-card{left:0}.hero-image-main{height:450px}}
+@media(max-width:620px){.hero-pro{padding-top:34px}.hero-pro h1{font-size:48px}.hero-pro .lead{font-size:16px}.hero-pro .hero-grid{gap:28px}.hero-visual{min-height:330px}.hero-image-main{height:315px;border-radius:22px}.hero-image-bottom{left:18px;right:18px;bottom:18px}.hero-image-bottom strong{font-size:20px}.hero-image-top{top:14px;left:14px;right:14px}.hero-float-card{left:5px;bottom:10px;padding:10px 12px}.hero-accent-card{top:20px;right:4px;width:72px;height:84px;padding:11px}.hero-accent-card b{font-size:9px}.hero-bottom-line .container{gap:10px;justify-content:flex-start;overflow:hidden;white-space:nowrap;flex-wrap:nowrap}.hero-mini-proof{gap:12px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.visual-glow,.hero-float-card{animation:none!important}}
+
 .hero-card{transform:none;animation:none}.hero-card:before{display:none}.hero-gridline{display:none}.hero-stage:before{filter:blur(28px)}
 .hero-photo{box-shadow:0 25px 70px rgba(0,0,0,.42)}
 .trust-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b0d10}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.trust-item{padding:22px 18px;border-right:1px solid var(--line)}.trust-item:last-child{border-right:0}.trust-item strong{display:block;font-size:20px;color:#fff}.trust-item span{display:block;color:#858a94;font-size:11px;margin-top:3px}
@@ -157,28 +198,39 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
     </div>
   </div>
 </header><main>
-<section class="hero">
+<section class="hero hero-pro" id="home">
+  <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
   <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow"><i></i> Nairobi · Kenya · East Africa</div>
-      <h1>Move <em>without</em> the chaos.</h1>
-      <p class="lead">Mofra Movers is a Nairobi-based moving and storage company serving homes, apartments and businesses. We handle relocation, packing, storage and transportation across Kenya and selected East African routes.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="#quote">Plan my move <span>→</span></a><a class="btn btn-dark" href="tel:+254721383823">Call 0721 383 823</a></div>
-      <div class="proof"><div><strong>2007</strong><span>established<br>in Kenya</span></div><i></i><div><strong>EA</strong><span>selected East<br>Africa routes</span></div><i></i><div><strong>24/7</strong><span>quote request<br>via WhatsApp</span></div></div>
-    </div>
-    <div class="hero-stage" id="heroStage">
-      <div class="hero-gridline"></div>
-      <div class="hero-card">
-        <div class="hero-photo">
-          <img src="/assets/images/hero.jpg" fetchpriority="high" decoding="async" alt="Mofra Movers service vehicle and moving operation" loading="eager" decoding="async">
-          <div class="hero-overlay"></div>
-          <div class="hero-label"><span class="live"></span> MOFRA MOVERS <span class="status">MOVING SERVICES</span></div>
-          <div class="hero-caption"><small>Professional moving & relocation</small><strong>Your move. Properly planned.</strong></div>
-        </div>
+    <div class="hero-copy reveal">
+      <div class="eyebrow"><i></i> NAIROBI · KENYA · EAST AFRICA</div>
+      <h1>Move <em>smarter.</em><br>Move with Mofra.</h1>
+      <p class="lead">Professional house moving, office relocation, packing, storage and transportation — planned carefully from pickup to delivery.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-glow" href="#quote">Get a Free Quote <span>→</span></a>
+        <a class="btn btn-dark" href="tel:+254721383823">Call 0721 383 823</a>
       </div>
-      <div class="hero-scroll"><span></span>scroll to explore</div>
+      <div class="hero-mini-proof">
+        <span><b>Since 2007</b>Trusted moving experience</span>
+        <span><b>Kenya + EA</b>Selected regional routes</span>
+        <span><b>WhatsApp</b>Easy quote requests</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="visual-glow"></div>
+      <div class="hero-image-main">
+        <img src="/assets/images/service-transport.jpg" fetchpriority="high" decoding="async" alt="Mofra Movers transportation and moving service">
+        <div class="hero-image-shade"></div>
+        <div class="hero-image-top"><span class="live"></span><b>MOFRA MOVERS</b><span class="status">READY TO MOVE</span></div>
+        <div class="hero-image-bottom"><small>Professional moving & relocation</small><strong>Your move. Properly planned.</strong></div>
+      </div>
+      <div class="hero-float-card">
+        <span class="float-icon">✓</span>
+        <div><b>Moving made simple</b><small>Plan · Pack · Move · Settle</small></div>
+      </div>
+      <div class="hero-accent-card"><span>01</span><b>HOUSE<br>TO<br>OFFICE</b></div>
     </div>
   </div>
+  <div class="hero-bottom-line"><div class="container"><span>MOVE WITH CONFIDENCE</span><i></i><span>PACKING</span><i></i><span>STORAGE</span><i></i><span>TRANSPORT</span><i></i><span>RELOCATION</span></div></div>
 </section>
 <section class="trust-strip" aria-label="Mofra Movers at a glance"><div class="container trust-grid"><div class="trust-item"><strong>Since 2007</strong><span>Nairobi-based moving company</span></div><div class="trust-item"><strong>3.7/5</strong><span>51 reviews on Google listing</span></div><div class="trust-item"><strong>Kenya + East Africa</strong><span>Selected regional routes</span></div><div class="trust-item"><strong>House + Office</strong><span>Relocation, packing, storage & transport</span></div></div></section>
 
@@ -302,8 +354,10 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
   close.addEventListener('click',closeBox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeBox();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lightbox.classList.contains('open'))closeBox();});
 
-  // Prevent broken external photos from leaving empty gallery blocks.
-  document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.style.background='#16181d';},{once:true}));
+  // Premium reveal animation and graceful image fallback.
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});
+  document.querySelectorAll('section:not(.hero),.trust-strip').forEach(el=>{el.classList.add('reveal');revealObserver.observe(el);});
+  document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.style.opacity='0';},{once:true}));
 })();
 </script>
 </body>
