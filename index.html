@@ -312,7 +312,42 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
 @media(max-width:950px){.hero-pro{padding:60px 0 50px!important}.hero-pro .hero-grid{grid-template-columns:1fr!important;gap:42px!important}.hero-pro .hero-visual{min-height:390px!important}.hero-clean-card{height:390px}}
 @media(max-width:620px){.hero-pro{padding:42px 0 35px!important}.hero-pro h1{font-size:50px!important}.hero-pro .lead{font-size:15px!important}.hero-pro .hero-actions{flex-wrap:wrap}.hero-pro .hero-visual{min-height:300px!important}.hero-clean-card{height:300px;padding:20px;border-radius:18px}.clean-card-center strong{font-size:37px}.clean-card-bottom{font-size:7px}}
 </style>
-</head>
+<style>
+/* Mofra premium hero — intentionally restrained, editorial and conversion-focused */
+.hero-premium{position:relative;min-height:690px;padding:78px 0 86px;overflow:hidden;isolation:isolate;background:#07080a}
+.hero-premium-bg{position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 82% 50%,rgba(237,28,36,.12),transparent 34%),linear-gradient(90deg,#07080a 0%,#07080a 48%,#0b0d11 100%)}
+.hero-premium-bg:after{content:"";position:absolute;right:-10%;top:12%;width:520px;height:520px;border:1px solid rgba(255,255,255,.055);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.012),0 0 0 140px rgba(255,255,255,.008)}
+.hero-premium-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:62px;align-items:center;min-height:526px}
+.hero-premium-copy{position:relative;z-index:3;max-width:590px}
+.hero-kicker{display:flex;align-items:center;gap:9px;color:#8e939d;font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+.hero-kicker span{width:24px;height:2px;background:var(--red);display:inline-block}
+.hero-premium h1{font-size:clamp(58px,7.1vw,96px);line-height:.87;letter-spacing:-.075em;margin:25px 0 27px;max-width:620px}
+.hero-premium h1 em{font-style:normal;color:var(--red)}
+.hero-premium-lead{margin:0;color:#aeb2bb;font-size:17px;line-height:1.72;max-width:500px}
+.hero-premium-actions{display:flex;align-items:center;gap:22px;margin-top:32px;flex-wrap:wrap}
+.hero-premium-actions .btn-primary{min-height:50px;padding-inline:21px}
+.hero-phone{display:flex;align-items:center;gap:10px;color:#dfe1e5}
+.hero-phone:hover{color:#fff}.phone-icon{width:35px;height:35px;border:1px solid rgba(255,255,255,.14);border-radius:50%;display:grid;place-items:center;color:#ff5961;font-size:14px}
+.hero-phone small{display:block;color:#777c85;font-size:9px;text-transform:uppercase;letter-spacing:.12em}.hero-phone b{display:block;font-size:13px;margin-top:1px}
+.hero-services{display:flex;align-items:center;gap:12px;margin-top:54px;color:#7c818b;font-size:10px;letter-spacing:.05em}
+.hero-services i{width:3px;height:3px;border-radius:50%;background:#454950}
+.hero-premium-media{position:relative;min-height:526px;display:flex;align-items:center;justify-content:center}
+.hero-photo-frame{position:relative;width:min(620px,100%);height:510px;border-radius:2px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,.13);box-shadow:0 35px 90px rgba(0,0,0,.5)}
+.hero-photo-frame:before{content:"";position:absolute;z-index:2;left:0;bottom:0;width:52%;height:4px;background:var(--red)}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.9) contrast(1.06);transform:scale(1.015)}
+.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.05) 42%,rgba(0,0,0,.72) 100%),linear-gradient(90deg,rgba(0,0,0,.22),transparent 65%)}
+.hero-photo-label{position:absolute;top:21px;left:22px;right:22px;display:flex;justify-content:space-between;color:#fff;font-size:9px;font-weight:900;letter-spacing:.17em}
+.hero-photo-label b{color:#ff5a62;font-size:10px}
+.hero-photo-caption{position:absolute;left:25px;bottom:28px}
+.hero-photo-caption small{display:block;color:#c7cad0;font-size:9px;letter-spacing:.16em;margin-bottom:6px}.hero-photo-caption strong{font-size:25px;letter-spacing:-.04em}
+.hero-location-chip{position:absolute;left:-26px;bottom:49px;display:flex;align-items:center;gap:10px;padding:13px 16px;background:rgba(12,14,18,.94);border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 45px rgba(0,0,0,.4)}
+.chip-dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(237,28,36,.1)}
+.hero-location-chip small{display:block;color:#737983;font-size:8px;text-transform:uppercase;letter-spacing:.1em}.hero-location-chip b{display:block;color:#fff;font-size:11px;margin-top:2px}
+.hero-year{position:absolute;right:-7px;top:49px;color:#656a73;font-size:9px;letter-spacing:.12em;writing-mode:vertical-rl}.hero-year span{color:var(--red);padding:8px 0}
+@media(max-width:950px){.hero-premium{padding:65px 0 72px}.hero-premium-grid{grid-template-columns:1fr;gap:44px}.hero-premium-copy{max-width:680px}.hero-premium-media{min-height:480px}.hero-photo-frame{height:470px;width:min(680px,100%)}.hero-location-chip{left:8px}.hero-year{right:10px}}
+@media(max-width:620px){.hero-premium{min-height:auto;padding:43px 0 58px}.hero-premium-grid{gap:34px}.hero-premium h1{font-size:53px;margin:20px 0 20px}.hero-premium-lead{font-size:15px;line-height:1.65}.hero-premium-actions{margin-top:26px;gap:15px}.hero-phone{width:100%}.hero-services{margin-top:31px;gap:8px;font-size:8px;flex-wrap:wrap}.hero-services i{display:none}.hero-premium-media{min-height:355px}.hero-photo-frame{height:350px;width:100%}.hero-photo-caption{left:18px;bottom:21px}.hero-photo-caption strong{font-size:20px}.hero-photo-label{left:18px;right:18px}.hero-location-chip{left:10px;bottom:20px;padding:10px 12px}.hero-year{right:4px;top:27px}}
+@media(prefers-reduced-motion:reduce){.hero-premium *{scroll-behavior:auto!important}}
+</style></head>
 <body id="top"><div class="scroll-progress" id="scrollProgress"></div>
 <header>
   <div class="container">
@@ -334,25 +369,28 @@ footer{padding:46px 0 105px;border-top:1px solid var(--line);color:#8b9099}.foot
     </div>
   </div>
 </header><main>
-<section class="hero hero-pro" id="home">
-  <div class="container hero-grid">
-    <div class="hero-copy reveal">
-      <div class="eyebrow"><i></i> MOFRA MOVERS · NAIROBI</div>
-      <h1>Moving made<br><em>simple.</em></h1>
-      <p class="lead">Professional moving, relocation, packing, storage and transportation — carefully planned from pickup to delivery.</p>
-      <div class="hero-actions">
+<section class="hero hero-premium" id="home">
+  <div class="hero-premium-bg" aria-hidden="true"></div>
+  <div class="container hero-premium-grid">
+    <div class="hero-premium-copy reveal">
+      <div class="hero-kicker"><span></span> MOVING & RELOCATION · NAIROBI</div>
+      <h1>A better way<br>to <em>move.</em></h1>
+      <p class="hero-premium-lead">Professional moving, packing, storage and transportation for homes and businesses across Kenya.</p>
+      <div class="hero-premium-actions">
         <a class="btn btn-primary" href="#quote">Get a Free Quote <span>→</span></a>
-        <a class="btn btn-dark" href="tel:+254721383823">Call 0721 383 823</a>
+        <a class="hero-phone" href="tel:+254721383823"><span class="phone-icon">↗</span><span><small>Talk to Mofra</small><b>0721 383 823</b></span></a>
       </div>
-      <p class="hero-note">House moves · Office relocation · Nairobi & Kenya</p>
+      <div class="hero-services"><span>House moving</span><i></i><span>Office relocation</span><i></i><span>Storage</span></div>
     </div>
-    <div class="hero-visual reveal" aria-hidden="true">
-      <div class="hero-clean-card">
-        <div class="clean-card-top"><span>MOFRA MOVERS</span><b>EST. 2007</b></div>
-        <div class="clean-card-center"><span>MOVE</span><strong>WITH<br>CONFIDENCE.</strong></div>
-        <div class="clean-card-line"></div>
-        <div class="clean-card-bottom"><span>PACKING</span><span>STORAGE</span><span>TRANSPORT</span></div>
+    <div class="hero-premium-media reveal">
+      <div class="hero-photo-frame">
+        <img src="/assets/images/service-transport.jpg" alt="Mofra Movers transportation service" loading="eager" fetchpriority="high">
+        <div class="hero-photo-overlay"></div>
+        <div class="hero-photo-label"><span>MOFRA MOVERS</span><b>01</b></div>
+        <div class="hero-photo-caption"><small>THE MOVE STARTS HERE</small><strong>Handled with care.</strong></div>
       </div>
+      <div class="hero-location-chip"><span class="chip-dot"></span><div><small>Based in</small><b>Nairobi, Kenya</b></div></div>
+      <div class="hero-year">2007<span>—</span>2026</div>
     </div>
   </div>
 </section>
